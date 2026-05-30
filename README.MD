@@ -199,8 +199,8 @@ cmake --build build --parallel
                   <td><code>1.13.1</code></td>
                   <td align="left">Базовая двумерная версия</td>
                   <td>
-                    <a href="https://github.com/Mr-Maks-S-A/Learn/blob/main/README_IMG/1.13.1_Game_of_Life.png">
-                      <img src="https://github.com/Mr-Maks-S-A/Learn/blob/main/README_IMG/1.13.1_Game_of_Life.png" height="40" alt="NO_IMG">
+                    <a href="https://github.com/Mr-Maks-S-A/Learn/blob/v1.13.1/README_IMG/1.13.1_Game_of_Life.png">
+                      <img src="https://github.com/Mr-Maks-S-A/Learn/blob/v1.13.1/README_IMG/1.13.1_Game_of_Life.png" height="40" alt="NO_IMG">
                     </a>
                   </td>
                   <td><a href="https://github.com/Mr-Maks-S-A/Learn/tree/v1.13.1"><img src="https://img.shields.io/badge/Ref-0075ca?style=for-the-badge&logo=github" height="20"></a></td>

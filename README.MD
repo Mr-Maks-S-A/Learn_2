@@ -1,16 +1,28 @@
-<div align="justify">
-  <a href="[first_tag_ref]">
-    <img src="https://img.shields.io/badge/⏮️_Первый_тег-v2.1.1-gray?style=flat" height="22">
-  </a>
-  <a href="[latest_tag_ref]">
-    <img src="https://img.shields.io/badge/⏭️_Последний_тег-latest-brightgreen?style=flat" height="22">
-  </a>
-  <span align="right" style="float: right;">
-    <a href="main.cpp">
-      <img src="https://img.shields.io/badge/Source_Code-blue?style=social&logo=github" height="25">
-    </a>
-  </span>
-</div>
+<table width="100%" style="border: none; border-collapse: collapse; background: transparent;">
+  <tr style="border: none; background: transparent;">
+    <td align="left" style="border: none; padding: 0; background: transparent;">
+      <a href="[first_tag_ref]">
+        <img src="https://img.shields.io/badge/⏮️_Первый-v2.1.1-gray?style=flat" height="22">
+      </a>
+      <a href="[prev_tag_ref]">
+        <img src="https://img.shields.io/badge/◀️_Назад-v2.1.0-blue?style=flat" height="22">
+      </a>
+      <a href="[next_tag_ref]">
+        <img src="https://img.shields.io/badge/Вперед_▶️-v2.1.2-blue?style=flat" height="22">
+      </a>
+      <a href="[latest_tag_ref]">
+        <img src="https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat" height="22">
+      </a>
+    </td>
+    <td align="right" style="border: none; padding: 0; background: transparent;">
+      <a href="main.cpp">
+        <img src="https://img.shields.io/badge/Source_Code-blue?style=social&logo=github" height="25">
+      </a>
+    </td>
+  </tr>
+</table>
+
+---
 
 <div align="center">
 
@@ -105,8 +117,10 @@ cmake --build build --parallel
 
 </details>
 
-
+[first_tag_ref]: ../../tree/v2.1.1
+[latest_tag_ref]: ../../releases/latest
 [github_badge]: https://img.shields.io/badge/Ref-0075ca?style=flat&logo=github
+
 
 [status2_2_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_2/ReadmeSource/Status/status.svg
 [preview2_2_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_2/ReadmeSource/IMG_2/

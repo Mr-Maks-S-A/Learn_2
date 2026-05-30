@@ -6,30 +6,27 @@
 
 </div>
 
-<table width="100%" style="border: none; border-collapse: collapse; background: transparent;">
-  <tr style="border: none; background: transparent;">
-    <td align="left" style="border: none; padding: 0; background: transparent;">
-      <a href="[first_tag_ref]">
-        <img src="https://img.shields.io/badge/⏮️_Первый-v2.1.1-gray?style=flat" height="22">
-      </a>
-      <a href="[prev_tag_ref]">
-        <img src="https://img.shields.io/badge/◀️_Назад-v2.1.0-blue?style=flat" height="22">
-      </a>
-      <a href="[next_tag_ref]">
-        <img src="https://img.shields.io/badge/Вперед_▶️-v2.1.2-blue?style=flat" height="22">
-      </a>
-      <a href="[latest_tag_ref]">
-        <img src="https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat" height="22">
-      </a>
-    </td>
-    <td align="right" style="border: none; padding: 0; background: transparent;">
-      <a href="main.cpp">
-        <img src="https://img.shields.io/badge/Source_Code-blue?style=social&logo=github" height="25">
-      </a>
-    </td>
-  </tr>
-</table>
 
+
+<div align="left">
+   <a href="[first_tag_ref]">
+     <img src="https://img.shields.io/badge/⏮️_Первый-v2.1.1-gray?style=flat" height="22">
+   </a>
+   <a href="[prev_tag_ref]">
+     <img src="https://img.shields.io/badge/◀️_Назад-v2.1.0-blue?style=flat" height="22">
+   </a>
+   <a href="[next_tag_ref]">
+     <img src="https://img.shields.io/badge/Вперед_▶️-v2.1.2-blue?style=flat" height="22">
+   </a>
+   <a href="[latest_tag_ref]">
+     <img src="https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat" height="22">
+   </a>
+</div>
+<div align="right">
+  <a href="https://github.com/Mr-Maks-S-A/Learn/blob/v1.10.2/main.cpp">
+    <img src="https://img.shields.io/badge/Source_Code-blue?style=social&logo=github" height="25">
+  </a>
+</div>
 ---
 
 <div align="center">

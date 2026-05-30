@@ -1,3 +1,11 @@
+<div align="center">
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![C++](https://img.shields.io/badge/C++-20-blue.svg)
+![CMake](https://img.shields.io/badge/CMake-4.0+-brightgreen.svg)
+
+</div>
+
 <table width="100%" style="border: none; border-collapse: collapse; background: transparent;">
   <tr style="border: none; background: transparent;">
     <td align="left" style="border: none; padding: 0; background: transparent;">
@@ -25,11 +33,6 @@
 ---
 
 <div align="center">
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![C++](https://img.shields.io/badge/C++-20-blue.svg)
-![CMake](https://img.shields.io/badge/CMake-4.0+-brightgreen.svg)
-
 
 #  Проект: Месяцы.
 Программа которая спрашивает у пользователя номер месяца и выводит на экран название месяца, введённого пользователем. <br>

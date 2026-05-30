@@ -1,20 +1,23 @@
 <div align="right">
-    <a href="https://github.com/Mr-Maks-S-A/Learn/blob/v1.12.4/main.cpp">
+    <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2.1.1/main.cpp">
         <img src="https://img.shields.io/badge/Source_Code-blue?style=social&logo=github" height="25">
     </a>
 </div>
 
 
 <div align="center">
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![C++](https://img.shields.io/badge/C++-20-blue.svg)
 ![CMake](https://img.shields.io/badge/CMake-4.0+-brightgreen.svg)
 
 
-#  Проект:
+#  Проект: Месяцы.
+Программа которая спрашивает у пользователя номер месяца и выводит на экран название месяца, введённого пользователем. <br>
+Если пользователь ввёл некорректный номер месяца, сообщите ему об этом.<br>
+Спрашивайте пользователя до тех пор, пока он не введёт 0.<br>
 
-
-> **Примечание:**
+> **Примечание:** Используется перечисление и старые наброски кода.
 </div>
 
 
@@ -43,7 +46,8 @@
 ```
 
 ### Preview
-![](README_IMG/1.12.4_Reading_a_two-dimensional_array_from_a_file.png)
+![Preview][preview2_1_1]
+![](ReadmeSource/IMG_1/)
 
 #  Команды для сборки
 
@@ -66,7 +70,7 @@ cmake --build build --parallel
 <br>
 
 <details open>
-<summary><b>Структуры и перечисления </b></summary>
+<summary><b>📂 2.1.0 Структуры и перечисления </b></summary>
 <br>
 
 | Статус | ID | Описание задачи | Preview | Ссылка |
@@ -82,5 +86,5 @@ cmake --build build --parallel
 [github_badge]: https://img.shields.io/badge/Ref-0075ca?style=flat&logo=github
 
 [status2_1_1]: ReadmeSource/Status/status.svg
-[preview2_1_1]: ReadmeSource/2.1.1_Months.png
+[preview2_1_1]: ReadmeSource/IMG_1/1_1_Months.png
 [ref2_1_1]: ../../tree/v2_1_1

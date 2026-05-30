@@ -16,6 +16,7 @@
   <a href="[next_tag_ref]"><img src="https://img.shields.io/badge/Вперед_▶️-v2.1.2-blue?style=flat" height="22"></a>
   <a href="[latest_tag_ref]"><img src="https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat" height="22"></a>
 </div>
+
 ---
 
 <div align="right">
@@ -150,16 +151,16 @@ cmake --build build --parallel
 
 
 
-[status2_1_3]: v2_1_3/ReadmeSource/Status/status.svg
-[preview2_1_3]: v2_1_3/ReadmeSource/IMG_1/
+[status2_1_3]: ReadmeSource/Status/status.svg
+[preview2_1_3]: ReadmeSource/IMG_1/
 [ref2_1_3]: v2_1_3
 
-[status2_1_2]: v2_1_2/ReadmeSource/Status/status.svg
-[preview2_1_2]: v2_1_2/ReadmeSource/IMG_1/
+[status2_1_2]: ReadmeSource/Status/status.svg
+[preview2_1_2]: ReadmeSource/IMG_1/
 [ref2_1_2]: v2_1_2
 
-[status2_1_1]: v2_1_1/ReadmeSource/Status/status.svg
-[preview2_1_1]: v2_1_1/ReadmeSource/IMG_1/1_1_Months.png
+[status2_1_1]: ReadmeSource/Status/status.svg
+[preview2_1_1]: ReadmeSource/IMG_1/1_1_Months.png
 [ref2_1_1]: v2_1_1
 
 
@@ -195,7 +196,7 @@ cmake --build build --parallel
                       <img src="https://github.com/Mr-Maks-S-A/Learn/blob/v1.13.1/README_IMG/1.13.1_Game_of_Life.png" height="40" alt="NO_IMG">
                     </a>
                   </td>
-                  <td><a href="https://github.com/Mr-Maks-S-A/Learn/tree/v1.13.1"><img src="https://img.shields.io/badge/Ref-0075ca?style=for-the-badge&logo=github" height="20"></a></td>
+                  <td><a href="<!--https://github.com/Mr-Maks-S-A/Learn/tree/v1.13.1-->"><img src="https://img.shields.io/badge/Ref-0075ca?style=for-the-badge&logo=github" height="20"></a></td>
                 </tr>
             </tbody>
            </table>

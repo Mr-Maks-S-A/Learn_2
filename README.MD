@@ -11,12 +11,11 @@
 
 
 <div align="left">
-  <a href="[first_tag_ref]"><img src="[badge_first]" height="22"></a>
+  <a href="[first_tag_ref]"><img src="https://img.shields.io/badge/⏮️_Первый-v2.1.1-gray?style=flat" height="22"></a>
   <a href="[prev_tag_ref]"><img src="[badge_prev]" height="22"></a>
   <a href="[next_tag_ref]"><img src="[badge_next]" height="22"></a>
   <a href="[latest_tag_ref]"><img src="[badge_latest]" height="22"></a>
 </div>
-
 ---
 
 <div align="right">
@@ -139,7 +138,6 @@ cmake --build build --parallel
 
 
 
-
 [first_tag_ref]:  v2_1_1
 [prev_tag_ref]:   https://github.com/Mr-Maks-S-A/Learn/tree/v1.13.1
 [next_tag_ref]:   v2_1_2
@@ -149,6 +147,9 @@ cmake --build build --parallel
 [badge_prev]:   https://img.shields.io/badge/◀️_Назад-v1.13.1-blue?style=flat
 [badge_next]:   https://img.shields.io/badge/Вперед_▶️-v2.1.2-blue?style=flat
 [badge_latest]: https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat
+
+
+[github_badge]: https://img.shields.io/badge/Ref-0075ca?style=flat&logo=github
 
 
 

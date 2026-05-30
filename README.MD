@@ -1,9 +1,16 @@
-<div align="right">
-    <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2.1.1/main.cpp">
-        <img src="https://img.shields.io/badge/Source_Code-blue?style=social&logo=github" height="25">
+<div align="justify">
+  <a href="[first_tag_ref]">
+    <img src="https://img.shields.io/badge/⏮️_Первый_тег-v2.1.1-gray?style=flat" height="22">
+  </a>
+  <a href="[latest_tag_ref]">
+    <img src="https://img.shields.io/badge/⏭️_Последний_тег-latest-brightgreen?style=flat" height="22">
+  </a>
+  <span align="right" style="float: right;">
+    <a href="main.cpp">
+      <img src="https://img.shields.io/badge/Source_Code-blue?style=social&logo=github" height="25">
     </a>
+  </span>
 </div>
-
 
 <div align="center">
 
@@ -18,11 +25,13 @@
 Спрашивайте пользователя до тех пор, пока он не введёт 0.<br>
 
 > **Примечание:** Используется перечисление и старые наброски кода.
+
 </div>
 
 
 
 <div align="center">
+
 # Окружение 
 
 | Property | Value |
@@ -69,6 +78,20 @@ cmake --build build --parallel
 <summary><b>2 Базовое программирование</b></summary>
 <br>
 
+
+<details>
+<summary><b>📂 2.2.0 Классы и объекты </b></summary>
+<br>
+
+| Статус | ID | Описание задачи | Preview | Ссылка |
+| :---: | :---: | :--- | :---: | :---: |
+|  ![][status2_2_1] | `2.2.1` | Калькулятор двух чисел| ![Preview][preview2_2_1] | [![Ref][github_badge]][ref2_2_1] |
+|  ![][status2_2_2] | `2.2.2` | Счётчик| ![Preview][preview2_2_2] | [![Ref][github_badge]][ref2_2_2] |
+
+</details>
+
+
+
 <details open>
 <summary><b>📂 2.1.0 Структуры и перечисления </b></summary>
 <br>
@@ -85,6 +108,15 @@ cmake --build build --parallel
 
 [github_badge]: https://img.shields.io/badge/Ref-0075ca?style=flat&logo=github
 
-[status2_1_1]: ReadmeSource/Status/status.svg
-[preview2_1_1]: ReadmeSource/IMG_1/1_1_Months.png
-[ref2_1_1]: ../../tree/v2_1_1
+[status2_2_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_2/ReadmeSource/Status/status.svg
+[preview2_2_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_2/ReadmeSource/IMG_2/
+[ref2_2_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_2
+
+[status2_2_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_1/ReadmeSource/Status/status.svg
+[preview2_2_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_1/ReadmeSource/IMG_2/
+[ref2_2_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_1
+
+
+[status2_1_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1/ReadmeSource/Status/status.svg
+[preview2_1_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1/ReadmeSource/IMG_1/1_1_Months.png
+[ref2_1_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1

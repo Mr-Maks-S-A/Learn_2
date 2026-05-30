@@ -149,7 +149,7 @@ cmake --build build --parallel
 
 
 [first_tag_ref]:  tree/v_first
-[prev_tag_ref]:  https://github.com/Mr-Maks-S-A/Learn/tree/v1.13.1
+[prev_tag_ref]: https://github.com/Mr-Maks-S-A/Learn/tree/v1.13.1
 [next_tag_ref]:   tree/v2.1.2
 [latest_tag_ref]: tree/v_latest
 [github_badge]: https://img.shields.io/badge/Ref-0075ca?style=flat&logo=github

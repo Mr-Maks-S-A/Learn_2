@@ -14,7 +14,7 @@
   <a href="v2_1_1"><img src="https://img.shields.io/badge/⏮️_Первый-v2.1.1-gray?style=flat" height="22"></a>
   <a href="https://github.com/Mr-Maks-S-A/Learn/tree/v1.13.1"><img src="https://img.shields.io/badge/◀️_Назад-v1.13.1-blue?style=flat" height="22"></a> 
   <a href="v2_1_2"><img src="https://img.shields.io/badge/Вперед_▶️-v2.1.2-blue?style=flat" height="22"></a>
-  <a href=""><img src="https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat" height="22"></a>
+  <a href="v_latest"><img src="https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat" height="22"></a>
 </div>
 
 ---

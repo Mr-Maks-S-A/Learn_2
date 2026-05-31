@@ -13,8 +13,8 @@
 <div align="left">
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1"><img src="https://img.shields.io/badge/⏮️_Первый-v2.1.1-gray?style=flat" height="22"></a>
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1"><img src="https://img.shields.io/badge/◀️_Назад-v2.1.1-blue?style=flat" height="22"></a> 
-  <a href="ttps://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_3"><img src="https://img.shields.io/badge/Вперед_▶️-v2.1.3-blue?style=flat" height="22"></a>
-  <a href="ttps://github.com/Mr-Maks-S-A/Learn_2/tree/v_latest"><img src="https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat" height="22"></a>
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_3"><img src="https://img.shields.io/badge/Вперед_▶️-v2.1.3-blue?style=flat" height="22"></a>
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v_latest"><img src="https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat" height="22"></a>
 </div>
 
 ---

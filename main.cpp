@@ -1,3 +1,4 @@
+#include <cstdint>
 #include <iostream> // Для потоков ввода/вывода
 #include <clocale>  // Библиотека для работы с локалью
 #include <cstdlib>  // Для макросов EXIT_SUCCESS
@@ -7,6 +8,9 @@
 #include <concepts> // Для std::derived_from, std::integral и т.д.
 #include <limits> // Обязательно для std::numeric_limits
 #include <cassert>     // Обязательно для работы assert()
+
+#include <iomanip> // Для std::fixed и std::setprecision
+
 
 /**
  * @brief Универсальная функция безопасного ввода числа с консоли в заданном диапазоне.
@@ -24,104 +28,126 @@ T get_input(const std::string& prompt,
     T value;
     while (true) {
         std::cout << prompt;
-        std::cin >> value;
+
+        while (std::isspace(std::cin.peek()) && std::cin.peek() != '\n') {
+            std::cin.get();
+        }
+
+        if constexpr (std::is_unsigned_v<T>) {
+            if (std::cin.peek() == '-') {
+                std::cout << "Ошибка: введено отрицательное число для беззнакового поля.\n";
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                continue;
+            }
+        }
 
         // 1. Проверка на корректность типа данных
-        if (std::cin.fail()) {
+        if (!(std::cin >> value)) {
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << "Ошибка: введите корректное число.\n";
             continue;
         }
 
-        // 2. Проверка попадания в диапазон [min_val, max_val]
-        if (value < min_val || value > max_val) {
-            std::cout << "Ошибка: значение должно быть в диапазоне от "
-            << min_val << " до " << max_val << ".\n";
+        while (std::isspace(std::cin.peek()) && std::cin.peek() != '\n') {
+            std::cin.get();
+        }
 
-            // Очищаем буфер, так как ввод некорректен, и идем на следующую итерацию
+        if (std::cin.peek() != '\n' && std::cin.peek() != EOF) {
+            std::cout << "Ошибка: обнаружены лишние символы после числа.\n";
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             continue;
         }
 
-        // Очищаем буфер от лишних символов (например, если ввели "10 abc")
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cin.ignore();
+
+        // 2. Проверка попадания в диапазон [min_val, max_val]
+        if (value < min_val || value > max_val) {
+            std::cout << "Ошибка: значение должно быть в диапазоне от "
+            << min_val << " до " << max_val << ".\n";
+            // Буфер уже чист благодаря шагу 4, очищать заново не нужно
+            continue;
+        }
+
         return value;
     }
 };
 
+// 2. Полная специализация шаблона для std::string
+template <typename T>
+requires std::is_same_v<T, std::string>
+std::string get_input(const std::string& prompt,
+                      size_t min_len = 0,
+                      size_t max_len = std::numeric_limits<size_t>::max())
+{
+    std::string value;
+    while (true) {
+        std::cout << prompt;
+        if (!std::getline(std::cin >> std::ws, value)) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Ошибка ввода.\n";
+            continue;
+        }
+
+        if (value.length() < min_len || value.length() > max_len) {
+            std::cout << "Ошибка: длина строки должна быть от " << min_len << " до " << max_len << ".\n";
+            continue;
+        }
+        return value;
+    }
+}
 
 
-enum class Month {
-     Exit       = 0     //выход
-    ,January    = 1     //Январь
-    ,February   = 2     //Февраль
-    ,March      = 3     //Март
-    ,April      = 4     //Апрель
-    ,May        = 5     //Май
-    ,June       = 6     //Июнь
-    ,July       = 7     //Июль
-    ,August     = 8     //Август
-    ,September  = 9     //Сентябрь
-    ,October    = 10    //Октябрь
-    ,November   = 11    //Ноябрь
-    ,December   = 12    //Декабрь
-    ,Final      = 13    //Указатель на окончание
- };
+// Определение структуры для хранения информации о банковском счёте
+struct BankAccount {
+    uint64_t accountNumber;     //только положительное целое число
+    long double balance;   //деньги
+    std::string ownerName;      //имя владельца
+};
 
 
 /**
- * @brief Обрабатывает числовой ввод, преобразует в месяц и выводит результат.
- * @param input_code Число, введенное пользователем.
- * @return true, если программа должна продолжить работу; false, если выбран выход.
+ * @brief Выводит информацию о банковском счёте в консоль.
+ * @param account Константная ссылка на структуру счёта.
  */
-bool process_month_selection(int input_code) {
-    // Проверяем рантайм-значение int перед кастом.
-    // Оно должно быть в диапазоне [Month::Exit, Month::Final)
-    assert(input_code >= static_cast<int>(Month::Exit) &&
-    input_code < static_cast<int>(Month::Final) &&
-    "input_code выходит за граници заранее определённых значений");
+void print_account(const BankAccount& account) {
+    std::cout << "\n===============================\n"
+    << "Ваш счёт: "
+    << account.ownerName        <<", "
+    << account.accountNumber    <<", "
+    << std::fixed << std::setprecision(2) << account.balance << "\n" /*форматируем для точного вывода каждой копейки*/
+    << "===============================\n\n";
+};
 
-    Month month = static_cast<Month>(input_code);
 
-    switch (month) {
-        case Month::Exit:
-            std::cout << "До свидания" << std::endl;
-            return false; // Сигнал к завершению цикла
-        case Month::January:   std::cout << "Январь" << std::endl; break;
-        case Month::February:  std::cout << "Февраль" << std::endl; break;
-        case Month::March:     std::cout << "Март" << std::endl; break;
-        case Month::April:     std::cout << "Апрель" << std::endl; break;
-        case Month::May:       std::cout << "Май" << std::endl; break;
-        case Month::June:      std::cout << "Июнь" << std::endl; break;
-        case Month::July:      std::cout << "Июль" << std::endl; break;
-        case Month::August:    std::cout << "Август" << std::endl; break;
-        case Month::September: std::cout << "Сентябрь" << std::endl; break;
-        case Month::October:   std::cout << "Октябрь" << std::endl; break;
-        case Month::November:  std::cout << "Ноябрь" << std::endl; break;
-        case Month::December:  std::cout << "Декабрь" << std::endl; break;
-    }
-    return true; // Продолжаем работу
+void update_balance(BankAccount& account, double new_balance) {
+    account.balance = new_balance;
 }
-
 
 int main() {
     // Устанавливаем локаль для корректного вывода кириллицы в консоль
     std::setlocale(LC_ALL, "Russian");
 
-    while (true) {
-        // Динамически вычисляем границы на основе enum, исключая маркер Final
-        int input = get_input<int>(
-            "Введите номер месяца: ",
-            static_cast<int>(Month::Exit),
-            static_cast<int>(Month::Final) - 1
-        );
+    BankAccount userAccount;
 
-        // Передаем валидное число на обработку. Если вернулся false — выходим из цикла
-        if (!process_month_selection(input)) {
-            break;
-        }
-    }
+    // 1. Заполняем поля структуры с помощью нашего универсального get_input
+    userAccount.accountNumber = get_input<uint64_t>("Введите номер счёта: ", 0);
+    userAccount.ownerName     = get_input<std::string>("Введите имя владельца: ", 1, 50);
+    userAccount.balance       = get_input<double>("Введите баланс: ");
+
+    // 1.5 Выводим результат
+    print_account(userAccount);
+
+    // 2. Запрашиваем новый баланс
+    double nextBalance = get_input<double>("Введите новый баланс: ", 0.0);
+
+    // 3. Модифицируем структуру через функцию
+    update_balance(userAccount, nextBalance);
+
+    // 3.5 Выводим результат
+    print_account(userAccount);
+
 
     return EXIT_SUCCESS;
 }

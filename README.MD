@@ -11,10 +11,10 @@
 ---
 
 <div align="left">
-  <a href="v2_1_1"><img src="https://img.shields.io/badge/⏮️_Первый-v2.1.1-gray?style=flat" height="22"></a>
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1"><img src="https://img.shields.io/badge/⏮️_Первый-v2.1.1-gray?style=flat" height="22"></a>
   <a href="https://github.com/Mr-Maks-S-A/Learn/tree/v1.13.1"><img src="https://img.shields.io/badge/◀️_Назад-v1.13.1-blue?style=flat" height="22"></a> 
-  <a href="v2_1_2"><img src="https://img.shields.io/badge/Вперед_▶️-v2.1.2-blue?style=flat" height="22"></a>
-  <a href="v_latest"><img src="https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat" height="22"></a>
+  <a href="ttps://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_2"><img src="https://img.shields.io/badge/Вперед_▶️-v2.1.2-blue?style=flat" height="22"></a>
+  <a href="ttps://github.com/Mr-Maks-S-A/Learn_2/tree/v_latest"><img src="https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat" height="22"></a>
 </div>
 
 ---
@@ -116,129 +116,6 @@ cmake --build build --parallel
 |  ![][status2_10_4] | `2.10.4` | Иерархия классов в DLL, проекты VC++.| ![Preview][preview2_10_4] | [![Ref][github_badge]][ref2_10_4] |
 |  ![][status2_10_5] | `2.10.5` | Иерархия классов в DLL и CMake.| ![Preview][preview2_10_5] | [![Ref][github_badge]][ref2_10_5] |
 
-</details>
-
-<details>
-<summary><b>📂 2.9.0 CMake </b></summary>
-<br>
-
-| Статус | ID | Описание задачи | Preview | Ссылка |
-| :---: | :---: | :--- | :---: | :---: |
-|  ![][status2_9_1] | `2.9.1` | Простейший проект.| ![Preview][preview2_9_1] | [![Ref][github_badge]][ref2_9_1] |
-|  ![][status2_9_2] | `2.9.2` | Проект посложнее.| ![Preview][preview2_9_2] | [![Ref][github_badge]][ref2_9_2] |
-
-</details>
-
-<details>
-<summary><b>📂 2.8.0 Перегрузка операторов </b></summary>
-<br>
-
-| Статус | ID | Описание задачи | Preview | Ссылка |
-| :---: | :---: | :--- | :---: | :---: |
-|  ![][status2_8_1] | `2.8.1` | Сравнения в дробях.| ![Preview][preview2_8_1] | [![Ref][github_badge]][ref2_8_1] |
-|  ![][status2_8_2] | `2.8.2` | Остальные операции с дробями.| ![Preview][preview2_8_2] | [![Ref][github_badge]][ref2_8_2] |
-
-</details>
-
-<details>
-<summary><b>📂 2.7.0 Исключения и обработка ошибок </b></summary>
-<br>
-
-| Статус | ID | Описание задачи | Preview | Ссылка |
-| :---: | :---: | :--- | :---: | :---: |
-|  ![][status2_7_1] | `2.7.1` | Простое исключение.| ![Preview][preview2_7_1] | [![Ref][github_badge]][ref2_7_1] |
-|  ![][status2_7_2] | `2.7.2` | Исключения в конструкторах.| ![Preview][preview2_7_2] | [![Ref][github_badge]][ref2_7_2] |
-
-</details>
-
-<details>
-<summary><b>📂 2.6.0 Препроцессор и макросы </b></summary>
-<br>
-
-| Статус | ID | Описание задачи | Preview | Ссылка |
-| :---: | :---: | :--- | :---: | :---: |
-|  ![][status2_6_1] | `2.6.1` | Препроцессорные директивы.| ![Preview][preview2_6_1] | [![Ref][github_badge]][ref2_6_1] |
-|  ![][status2_6_2] | `2.6.2` | Макрос SUB.| ![Preview][preview2_6_2] | [![Ref][github_badge]][ref2_6_2] |
-
-</details>
-
-<details>
-<summary><b>📂 2.5.0 Многофайловые проекты и библиотеки </b></summary>
-<br>
-
-| Статус | ID | Описание задачи | Preview | Ссылка |
-| :---: | :---: | :--- | :---: | :---: |
-|  ![][status2_5_1] | `2.5.1` | Математические функции.| ![Preview][preview2_5_1] | [![Ref][github_badge]][ref2_5_1] |
-|  ![][status2_5_2] | `2.5.2` | Класс.| ![Preview][preview2_5_2] | [![Ref][github_badge]][ref2_5_2] |
-|  ![][status2_5_3] | `2.5.3` | Иерархия классов.| ![Preview][preview2_5_3] | [![Ref][github_badge]][ref2_5_3] |
-
-</details>
-
-<details>
-<summary><b>📂 2.4.0 ООП: наследование и полиморфизм. </b></summary>
-<br>
-
-| Статус | ID | Описание задачи | Preview | Ссылка |
-| :---: | :---: | :--- | :---: | :---: |
-|  ![][status2_4_1] | `2.4.1` | Фигуры. Количество сторон.| ![Preview][preview2_4_1] | [![Ref][github_badge]][ref2_4_1] |
-|  ![][status2_4_2] | `2.4.2` |Фигуры. Стороны и углы.| ![Preview][preview2_4_2] | [![Ref][github_badge]][ref2_4_2] |
-|  ![][status2_4_3] | `2.4.3` |Фигуры. Методы.| ![Preview][preview2_4_3] | [![Ref][github_badge]][ref2_4_3] |
-
-</details>
-
-<details>
-<summary><b>📂 2.3.0 ООП: абстракция и инкапсуляция. </b></summary>
-<br>
-
-| Статус | ID | Описание задачи | Preview | Ссылка |
-| :---: | :---: | :--- | :---: | :---: |
-|  ![][status2_3_1] | `2.3.1` | Адреса.| ![Preview][preview2_3_1] | [![Ref][github_badge]][ref2_3_1] |
-|  ![][status2_3_2] | `2.3.2` | Сортируем адреса.| ![Preview][preview2_3_2] | [![Ref][github_badge]][ref2_3_2] |
-
-</details>
-
-
-<details>
-<summary><b>📂 2.2.0 Классы и объекты </b></summary>
-<br>
-
-| Статус | ID | Описание задачи | Preview | Ссылка |
-| :---: | :---: | :--- | :---: | :---: |
-|  ![][status2_2_1] | `2.2.1` | Калькулятор двух чисел| ![Preview][preview2_2_1] | [![Ref][github_badge]][ref2_2_1] |
-|  ![][status2_2_2] | `2.2.2` | Счётчик| ![Preview][preview2_2_2] | [![Ref][github_badge]][ref2_2_2] |
-
-</details>
-
-
-<details open>
-<summary><b>📂 2.1.0 Структуры и перечисления </b></summary>
-<br>
-
-| Статус | ID | Описание задачи | Preview | Ссылка |
-| :---: | :---: | :--- | :---: | :---: |
-|  ![][status2_1_1] | `2.1.1` | Месяцы. | ![Preview][preview2_1_1] | [![Ref][github_badge]][ref2_1_1] |
-|  ![][status2_1_2] | `2.1.2` | Счета.  | ![Preview][preview2_1_2] | [![Ref][github_badge]][ref2_1_2] |
-|  ![][status2_1_3] | `2.1.3` | Вывод структуры. | ![Preview][preview2_1_3] | [![Ref][github_badge]][ref2_1_3] |
-
-[status2_1_3]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_3/ReadmeSource/Status/status.svg
-[preview2_1_3]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_3/ReadmeSource/IMG_2_1/3_Preview.png
-[ref2_1_3]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_3
-
-[status2_1_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_2/ReadmeSource/Status/status.svg
-[preview2_1_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_2/ReadmeSource/IMG_2_1/2_Preview.png
-[ref2_1_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_2
-
-[status2_1_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_1_1/ReadmeSource/Status/status.svg
-[preview2_1_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_1_1/ReadmeSource/IMG_2_1/1_Preview.png
-[ref2_1_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1
-
-</details>
-
-
-</details>
-
-[github_badge]: https://img.shields.io/badge/Ref-0075ca?style=flat&logo=github
-
 [status2_10_5]: v2_10_5/ReadmeSource/Status/status.svg
 [preview2_10_5]: v2_10_5/ReadmeSource/IMG_2_10/5_Preview.png
 [ref2_10_5]: v2_10_5
@@ -259,7 +136,16 @@ cmake --build build --parallel
 [preview2_10_1]: v2_10_1/ReadmeSource/IMG_2_10/1_Preview.png
 [ref2_10_1]: v2_10_1
 
+</details>
 
+<details>
+<summary><b>📂 2.9.0 CMake </b></summary>
+<br>
+
+| Статус | ID | Описание задачи | Preview | Ссылка |
+| :---: | :---: | :--- | :---: | :---: |
+|  ![][status2_9_1] | `2.9.1` | Простейший проект.| ![Preview][preview2_9_1] | [![Ref][github_badge]][ref2_9_1] |
+|  ![][status2_9_2] | `2.9.2` | Проект посложнее.| ![Preview][preview2_9_2] | [![Ref][github_badge]][ref2_9_2] |
 
 [status2_9_2]: v2_9_2/ReadmeSource/Status/status.svg
 [preview2_9_2]: v2_9_2/ReadmeSource/IMG_2_9/2_Preview.png
@@ -270,6 +156,16 @@ cmake --build build --parallel
 [ref2_9_1]: v2_9_1
 
 
+</details>
+
+<details>
+<summary><b>📂 2.8.0 Перегрузка операторов </b></summary>
+<br>
+
+| Статус | ID | Описание задачи | Preview | Ссылка |
+| :---: | :---: | :--- | :---: | :---: |
+|  ![][status2_8_1] | `2.8.1` | Сравнения в дробях.| ![Preview][preview2_8_1] | [![Ref][github_badge]][ref2_8_1] |
+|  ![][status2_8_2] | `2.8.2` | Остальные операции с дробями.| ![Preview][preview2_8_2] | [![Ref][github_badge]][ref2_8_2] |
 
 [status2_8_2]: v2_8_2/ReadmeSource/Status/status.svg
 [preview2_8_2]: v2_8_2/ReadmeSource/IMG_2_8/2_Preview.png
@@ -279,7 +175,16 @@ cmake --build build --parallel
 [preview2_8_1]: v2_8_1/ReadmeSource/IMG_2_8/1_Preview.png
 [ref2_8_1]: v2_8_1
 
+</details>
 
+<details>
+<summary><b>📂 2.7.0 Исключения и обработка ошибок </b></summary>
+<br>
+
+| Статус | ID | Описание задачи | Preview | Ссылка |
+| :---: | :---: | :--- | :---: | :---: |
+|  ![][status2_7_1] | `2.7.1` | Простое исключение.| ![Preview][preview2_7_1] | [![Ref][github_badge]][ref2_7_1] |
+|  ![][status2_7_2] | `2.7.2` | Исключения в конструкторах.| ![Preview][preview2_7_2] | [![Ref][github_badge]][ref2_7_2] |
 
 [status2_7_2]: v2_7_2/ReadmeSource/Status/status.svg
 [preview2_7_2]: v2_7_2/ReadmeSource/IMG_2_7/2_Preview.png
@@ -289,7 +194,16 @@ cmake --build build --parallel
 [preview2_7_1]: v2_7_1/ReadmeSource/IMG_2_7/1_Preview.png
 [ref2_7_1]: v2_7_1
 
+</details>
 
+<details>
+<summary><b>📂 2.6.0 Препроцессор и макросы </b></summary>
+<br>
+
+| Статус | ID | Описание задачи | Preview | Ссылка |
+| :---: | :---: | :--- | :---: | :---: |
+|  ![][status2_6_1] | `2.6.1` | Препроцессорные директивы.| ![Preview][preview2_6_1] | [![Ref][github_badge]][ref2_6_1] |
+|  ![][status2_6_2] | `2.6.2` | Макрос SUB.| ![Preview][preview2_6_2] | [![Ref][github_badge]][ref2_6_2] |
 
 [status2_6_2]: v2_6_2/ReadmeSource/Status/status.svg
 [preview2_6_2]: v2_6_2/ReadmeSource/IMG_2_6/2_Preview.png
@@ -299,7 +213,17 @@ cmake --build build --parallel
 [preview2_6_1]: v2_6_1/ReadmeSource/IMG_2_6/1_Preview.png
 [ref2_6_1]: v2_6_1
 
+</details>
 
+<details>
+<summary><b>📂 2.5.0 Многофайловые проекты и библиотеки </b></summary>
+<br>
+
+| Статус | ID | Описание задачи | Preview | Ссылка |
+| :---: | :---: | :--- | :---: | :---: |
+|  ![][status2_5_1] | `2.5.1` | Математические функции.| ![Preview][preview2_5_1] | [![Ref][github_badge]][ref2_5_1] |
+|  ![][status2_5_2] | `2.5.2` | Класс.| ![Preview][preview2_5_2] | [![Ref][github_badge]][ref2_5_2] |
+|  ![][status2_5_3] | `2.5.3` | Иерархия классов.| ![Preview][preview2_5_3] | [![Ref][github_badge]][ref2_5_3] |
 
 [status2_5_3]: v2_5_3/ReadmeSource/Status/status.svg
 [preview2_5_3]: v2_5_3/ReadmeSource/IMG_2_5/3_Preview.png
@@ -313,6 +237,17 @@ cmake --build build --parallel
 [preview2_5_1]: v2_5_1/ReadmeSource/IMG_2_5/1_Preview.png
 [ref2_5_1]: v2_5_1
 
+</details>
+
+<details>
+<summary><b>📂 2.4.0 ООП: наследование и полиморфизм. </b></summary>
+<br>
+
+| Статус | ID | Описание задачи | Preview | Ссылка |
+| :---: | :---: | :--- | :---: | :---: |
+|  ![][status2_4_1] | `2.4.1` | Фигуры. Количество сторон.| ![Preview][preview2_4_1] | [![Ref][github_badge]][ref2_4_1] |
+|  ![][status2_4_2] | `2.4.2` |Фигуры. Стороны и углы.| ![Preview][preview2_4_2] | [![Ref][github_badge]][ref2_4_2] |
+|  ![][status2_4_3] | `2.4.3` |Фигуры. Методы.| ![Preview][preview2_4_3] | [![Ref][github_badge]][ref2_4_3] |
 
 
 [status2_4_3]: v2_4_3/ReadmeSource/Status/status.svg
@@ -328,6 +263,17 @@ cmake --build build --parallel
 [ref2_4_1]: v2_4_1
 
 
+</details>
+
+<details>
+<summary><b>📂 2.3.0 ООП: абстракция и инкапсуляция. </b></summary>
+<br>
+
+| Статус | ID | Описание задачи | Preview | Ссылка |
+| :---: | :---: | :--- | :---: | :---: |
+|  ![][status2_3_1] | `2.3.1` | Адреса.| ![Preview][preview2_3_1] | [![Ref][github_badge]][ref2_3_1] |
+|  ![][status2_3_2] | `2.3.2` | Сортируем адреса.| ![Preview][preview2_3_2] | [![Ref][github_badge]][ref2_3_2] |
+
 
 [status2_3_2]: v2_3_2/ReadmeSource/Status/status.svg
 [preview2_3_2]: v2_3_2/ReadmeSource/IMG_2_3/2_Preview.png
@@ -338,6 +284,17 @@ cmake --build build --parallel
 [ref2_3_1]: v2_3_1
 
 
+</details>
+
+
+<details>
+<summary><b>📂 2.2.0 Классы и объекты </b></summary>
+<br>
+
+| Статус | ID | Описание задачи | Preview | Ссылка |
+| :---: | :---: | :--- | :---: | :---: |
+|  ![][status2_2_1] | `2.2.1` | Калькулятор двух чисел| ![Preview][preview2_2_1] | [![Ref][github_badge]][ref2_2_1] |
+|  ![][status2_2_2] | `2.2.2` | Счётчик| ![Preview][preview2_2_2] | [![Ref][github_badge]][ref2_2_2] |
 
 
 [status2_2_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_2/ReadmeSource/Status/status.svg
@@ -347,6 +304,69 @@ cmake --build build --parallel
 [status2_2_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_1/ReadmeSource/Status/status.svg
 [preview2_2_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_1/ReadmeSource/IMG_2_2/1_Preview.png
 [ref2_2_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_1
+
+</details>
+
+
+<details open>
+<summary><b>📂 2.1.0 Структуры и перечисления </b></summary>
+<br>
+
+| Статус | ID | Описание задачи | Preview | Ссылка |
+| :---: | :---: | :--- | :---: | :---: |
+|  ![][status2_1_1] | `2.1.1` | Месяцы. | ![Preview][preview2_1_1] | [![Ref][github_badge]][ref2_1_1] |
+|  ![][status2_1_2] | `2.1.2` | Счета.  | ![Preview][preview2_1_2] | [![Ref][github_badge]][ref2_1_2] |
+|  ![][status2_1_3] | `2.1.3` | Вывод структуры. | ![Preview][preview2_1_3] | [![Ref][github_badge]][ref2_1_3] |
+
+[status2_1_3]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_1_3/ReadmeSource/Status/status.svg
+[preview2_1_3]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_1_3/ReadmeSource/IMG_2_1/3_Preview.png
+[ref2_1_3]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_3
+
+[status2_1_2]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_1_2/ReadmeSource/Status/status.svg
+[preview2_1_2]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_1_2/ReadmeSource/IMG_2_1/2_Preview.png
+[ref2_1_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_2
+
+[status2_1_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_1_1/ReadmeSource/Status/status.svg
+[preview2_1_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_1_1/ReadmeSource/IMG_2_1/1_Preview.png
+[ref2_1_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1
+
+</details>
+
+
+</details>
+
+[github_badge]: https://img.shields.io/badge/Ref-0075ca?style=flat&logo=github
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

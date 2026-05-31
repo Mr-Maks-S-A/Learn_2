@@ -82,7 +82,7 @@
 ```
 
 ### Preview
-![Preview][preview2_1_1]
+![][preview2_1_1]
 
 #  Команды для сборки
 
@@ -216,7 +216,7 @@ cmake --build build --parallel
 
 | Статус | ID | Описание задачи | Preview | Ссылка |
 | :---: | :---: | :--- | :---: | :---: |
-|  ![]([status2_1_1]) | `2.1.1` | Месяцы. | ![]([preview2_1_1]) | [![Ref][github_badge]][ref2_1_1] |
+|  ![][status2_1_1] | `2.1.1` | Месяцы. | ![Preview][preview2_1_1] | [![Ref][github_badge]][ref2_1_1] |
 |  ![][status2_1_2] | `2.1.2` | Счета.  | ![Preview][preview2_1_2] | [![Ref][github_badge]][ref2_1_2] |
 |  ![][status2_1_3] | `2.1.3` | Вывод структуры. | ![Preview][preview2_1_3] | [![Ref][github_badge]][ref2_1_3] |
 
@@ -347,8 +347,8 @@ cmake --build build --parallel
 [preview2_1_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_2/ReadmeSource/IMG_2_1/2_Preview.png
 [ref2_1_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_2
 
-[status2_1_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1/ReadmeSource/Status/status.svg
-[preview2_1_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1/ReadmeSource/IMG_2_1/1_Preview.png
+[status2_1_1]: (https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1/ReadmeSource/Status/status.svg)
+[preview2_1_1]: (https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1/ReadmeSource/IMG_2_1/1_Preview.png)
 [ref2_1_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1
 
 

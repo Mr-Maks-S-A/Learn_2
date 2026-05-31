@@ -216,7 +216,7 @@ cmake --build build --parallel
 
 | Статус | ID | Описание задачи | Preview | Ссылка |
 | :---: | :---: | :--- | :---: | :---: |
-|  ![][status2_1_1] | `2.1.1` | Месяцы. | ![Preview][preview2_1_1] | [![Ref][github_badge]][ref2_1_1] |
+|  ![]([status2_1_1]) | `2.1.1` | Месяцы. | ![]([preview2_1_1]) | [![Ref][github_badge]][ref2_1_1] |
 |  ![][status2_1_2] | `2.1.2` | Счета.  | ![Preview][preview2_1_2] | [![Ref][github_badge]][ref2_1_2] |
 |  ![][status2_1_3] | `2.1.3` | Вывод структуры. | ![Preview][preview2_1_3] | [![Ref][github_badge]][ref2_1_3] |
 

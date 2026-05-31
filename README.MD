@@ -20,7 +20,7 @@
 ---
 
 <div align="right">
-  <a href="v2.1.1/main.cpp">
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_1_1/main.cpp">
     <img src="https://img.shields.io/badge/Source_Code-blue?style=social&logo=github" height="25">
   </a>
 </div>

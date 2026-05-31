@@ -8,7 +8,7 @@
 
 </div>
 
-
+---
 
 <div align="left">
   <a href="v2_1_1"><img src="https://img.shields.io/badge/⏮️_Первый-v2.1.1-gray?style=flat" height="22"></a>
@@ -86,13 +86,84 @@ cmake --build build --parallel
 <br>
 
 <details>
+<summary><b>📂 2.10.0 Сборка и подключение библиотек </b></summary>
+<br>
+
+| Статус | ID | Описание задачи | Preview | Ссылка |
+| :---: | :---: | :--- | :---: | :---: |
+|  ![][status2_2_1] | `2.10.1` | Статическая библиотека.| ![Preview][preview2_2_1] | [![Ref][github_badge]][ref2_2_1] |
+|  ![][status2_2_2] | `2.10.2` | Динамическая библиотека.| ![Preview][preview2_2_2] | [![Ref][github_badge]][ref2_2_2] |
+|  ![][status2_2_2] | `2.10.3` | Динамическая библиотека CMake.| ![Preview][preview2_2_2] | [![Ref][github_badge]][ref2_2_2] |
+|  ![][status2_2_2] | `2.10.4` | Иерархия классов в DLL, проекты VC++.| ![Preview][preview2_2_2] | [![Ref][github_badge]][ref2_2_2] |
+|  ![][status2_2_2] | `2.10.5` | Иерархия классов в DLL и CMake.| ![Preview][preview2_2_2] | [![Ref][github_badge]][ref2_2_2] |
+
+</details>
+
+<details>
+<summary><b>📂 2.9.0 CMake </b></summary>
+<br>
+
+| Статус | ID | Описание задачи | Preview | Ссылка |
+| :---: | :---: | :--- | :---: | :---: |
+|  ![][status2_2_1] | `2.9.1` | Простейший проект.| ![Preview][preview2_2_1] | [![Ref][github_badge]][ref2_2_1] |
+|  ![][status2_2_2] | `2.9.2` | Проект посложнее.| ![Preview][preview2_2_2] | [![Ref][github_badge]][ref2_2_2] |
+
+</details>
+
+<details>
+<summary><b>📂 2.8.0 Перегрузка операторов </b></summary>
+<br>
+
+| Статус | ID | Описание задачи | Preview | Ссылка |
+| :---: | :---: | :--- | :---: | :---: |
+|  ![][status2_2_1] | `2.8.1` | Сравнения в дробях.| ![Preview][preview2_2_1] | [![Ref][github_badge]][ref2_2_1] |
+|  ![][status2_2_2] | `2.8.2` | Остальные операции с дробями.| ![Preview][preview2_2_2] | [![Ref][github_badge]][ref2_2_2] |
+
+</details>
+
+<details>
+<summary><b>📂 2.7.0 Исключения и обработка ошибок </b></summary>
+<br>
+
+| Статус | ID | Описание задачи | Preview | Ссылка |
+| :---: | :---: | :--- | :---: | :---: |
+|  ![][status2_2_1] | `2.7.1` | Простое исключение.| ![Preview][preview2_2_1] | [![Ref][github_badge]][ref2_2_1] |
+|  ![][status2_2_2] | `2.7.2` | Исключения в конструкторах.| ![Preview][preview2_2_2] | [![Ref][github_badge]][ref2_2_2] |
+
+</details>
+
+<details>
+<summary><b>📂 2.6.0 Препроцессор и макросы </b></summary>
+<br>
+
+| Статус | ID | Описание задачи | Preview | Ссылка |
+| :---: | :---: | :--- | :---: | :---: |
+|  ![][status2_2_1] | `2.6.1` | Препроцессорные директивы.| ![Preview][preview2_2_1] | [![Ref][github_badge]][ref2_2_1] |
+|  ![][status2_2_2] | `2.6.2` | Макрос SUB.| ![Preview][preview2_2_2] | [![Ref][github_badge]][ref2_2_2] |
+
+</details>
+
+<details>
+<summary><b>📂 2.5.0 Многофайловые проекты и библиотеки </b></summary>
+<br>
+
+| Статус | ID | Описание задачи | Preview | Ссылка |
+| :---: | :---: | :--- | :---: | :---: |
+|  ![][status2_2_1] | `2.5.1` | Математические функции.| ![Preview][preview2_2_1] | [![Ref][github_badge]][ref2_2_1] |
+|  ![][status2_2_2] | `2.5.2` | Класс.| ![Preview][preview2_2_2] | [![Ref][github_badge]][ref2_2_2] |
+|  ![][status2_2_2] | `2.5.3` | Иерархия классов.| ![Preview][preview2_2_2] | [![Ref][github_badge]][ref2_2_2] |
+
+</details>
+
+<details>
 <summary><b>📂 2.4.0 ООП: наследование и полиморфизм. </b></summary>
 <br>
 
 | Статус | ID | Описание задачи | Preview | Ссылка |
 | :---: | :---: | :--- | :---: | :---: |
-|  ![][status2_2_1] | `2.4.1` | Калькулятор двух чисел| ![Preview][preview2_2_1] | [![Ref][github_badge]][ref2_2_1] |
-|  ![][status2_2_2] | `2.4.2` | Счётчик| ![Preview][preview2_2_2] | [![Ref][github_badge]][ref2_2_2] |
+|  ![][status2_2_1] | `2.4.1` | Фигуры. Количество сторон.| ![Preview][preview2_2_1] | [![Ref][github_badge]][ref2_2_1] |
+|  ![][status2_2_2] | `2.4.2` |Фигуры. Стороны и углы.| ![Preview][preview2_2_2] | [![Ref][github_badge]][ref2_2_2] |
+|  ![][status2_2_2] | `2.4.3` |Фигуры. Методы.| ![Preview][preview2_2_2] | [![Ref][github_badge]][ref2_2_2] |
 
 </details>
 
@@ -102,8 +173,8 @@ cmake --build build --parallel
 
 | Статус | ID | Описание задачи | Preview | Ссылка |
 | :---: | :---: | :--- | :---: | :---: |
-|  ![][status2_2_1] | `2.3.1` | Калькулятор двух чисел| ![Preview][preview2_2_1] | [![Ref][github_badge]][ref2_2_1] |
-|  ![][status2_2_2] | `2.3.2` | Счётчик| ![Preview][preview2_2_2] | [![Ref][github_badge]][ref2_2_2] |
+|  ![][status2_2_1] | `2.3.1` | Адреса.| ![Preview][preview2_2_1] | [![Ref][github_badge]][ref2_2_1] |
+|  ![][status2_2_2] | `2.3.2` | Сортируем адреса.| ![Preview][preview2_2_2] | [![Ref][github_badge]][ref2_2_2] |
 
 </details>
 
@@ -136,6 +207,24 @@ cmake --build build --parallel
 </details>
 
 [github_badge]: https://img.shields.io/badge/Ref-0075ca?style=flat&logo=github
+
+
+
+
+[status2_3_1]: ReadmeSource/Status/status.svg
+[preview2_3_1]: ReadmeSource/IMG_3/
+[ref2_3_1]: v2_3_1
+
+
+
+
+[status2_2_2]: ReadmeSource/Status/status.svg
+[preview2_2_2]: v2_2_1/ReadmeSource/IMG_2/
+[ref2_2_2]: v2_2_2
+
+[status2_2_1]: ReadmeSource/Status/status.svg
+[preview2_2_1]: v2_2_1/ReadmeSource/IMG_2/
+[ref2_2_1]: v2_2_1
 
 
 

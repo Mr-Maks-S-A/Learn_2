@@ -33,7 +33,7 @@
 Спрашивайте пользователя до тех пор, пока он не введёт 0.<br>
 **Ввод защищен от некорректных типов данных (например, строк или букв) и чисел вне установленного диапазона.**<br>
 
-> **Примечание:** Используется перечисление и старые наброски кода.
+> **Примечание:** Используется перечисление и старые наброски кода.<br>
 Повторно использовались решения:<br> 
 [![Ref](https://img.shields.io/badge/ref-v1.10.1-blue?style=flat-square&logo=github)](https://github.com/Mr-Maks-S-A/Learn/blob/v1.10.1/) исходник функции **get_input**<br>
 
@@ -297,12 +297,12 @@ cmake --build build --parallel
 |  ![][status2_2_2] | `2.2.2` | Счётчик| ![Preview][preview2_2_2] | [![Ref][github_badge]][ref2_2_2] |
 
 
-[status2_2_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_2/ReadmeSource/Status/status.svg
-[preview2_2_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_2/ReadmeSource/IMG_2_2/2_Preview.png
+[status2_2_2]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_2_2/ReadmeSource/Status/status.svg
+[preview2_2_2]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_2_2/ReadmeSource/IMG_2_2/2_Preview.png
 [ref2_2_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_2
 
-[status2_2_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_1/ReadmeSource/Status/status.svg
-[preview2_2_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_1/ReadmeSource/IMG_2_2/1_Preview.png
+[status2_2_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_2_1/ReadmeSource/Status/status.svg
+[preview2_2_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_2_1/ReadmeSource/IMG_2_2/1_Preview.png
 [ref2_2_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_1
 
 </details>
@@ -336,46 +336,6 @@ cmake --build build --parallel
 </details>
 
 [github_badge]: https://img.shields.io/badge/Ref-0075ca?style=flat&logo=github
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <details>

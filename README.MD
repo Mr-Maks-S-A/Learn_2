@@ -347,7 +347,7 @@ cmake --build build --parallel
 [preview2_1_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_2/ReadmeSource/IMG_2_1/2_Preview.png
 [ref2_1_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_2
 
-[status2_1_1]: https://raw.githubusercontent.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1/ReadmeSource/Status/status.svg
+[status2_1_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_1_1/ReadmeSource/Status/status.svg
 [preview2_1_1]: ReadmeSource/IMG_2_1/1_Preview.png
 [ref2_1_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1
 

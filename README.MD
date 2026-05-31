@@ -1,4 +1,4 @@
-<base href="https://github.com/Mr-Maks-S-A/Learn_2/tree/">
+<!--<base href="https://github.com/Mr-Maks-S-A/Learn_2/tree/">-->
 
 <div align="center">
 

@@ -328,28 +328,28 @@ cmake --build build --parallel
 
 
 
-[status2_2_2]: v2_2_2/ReadmeSource/Status/status.svg
-[preview2_2_2]: v2_2_2/ReadmeSource/IMG_2_2/2_Preview.png
-[ref2_2_2]: v2_2_2
+[status2_2_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_2/ReadmeSource/Status/status.svg
+[preview2_2_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_2/ReadmeSource/IMG_2_2/2_Preview.png
+[ref2_2_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_2
 
-[status2_2_1]: v2_2_1/ReadmeSource/Status/status.svg
-[preview2_2_1]: v2_2_1/ReadmeSource/IMG_2_2/1_Preview.png
-[ref2_2_1]: v2_2_1
-
-
+[status2_2_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_1/ReadmeSource/Status/status.svg
+[preview2_2_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_1/ReadmeSource/IMG_2_2/1_Preview.png
+[ref2_2_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_1
 
 
-[status2_1_3]: v2_1_3/ReadmeSource/Status/status.svg
-[preview2_1_3]: v2_1_3/ReadmeSource/IMG_2_1/3_Preview.png
-[ref2_1_3]: v2_1_3
 
-[status2_1_2]: v2_1_2/ReadmeSource/Status/status.svg
-[preview2_1_2]: v2_1_2/ReadmeSource/IMG_2_1/2_Preview.png
-[ref2_1_2]: v2_1_2
 
-[status2_1_1]: v2_1_1/ReadmeSource/Status/status.svg
-[preview2_1_1]: v2_1_1/ReadmeSource/IMG_2_1/1_Preview.png
-[ref2_1_1]: v2_1_1
+[status2_1_3]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_3/ReadmeSource/Status/status.svg
+[preview2_1_3]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_3/ReadmeSource/IMG_2_1/3_Preview.png
+[ref2_1_3]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_3
+
+[status2_1_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_2/ReadmeSource/Status/status.svg
+[preview2_1_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_2/ReadmeSource/IMG_2_1/2_Preview.png
+[ref2_1_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_2
+
+[status2_1_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1/ReadmeSource/Status/status.svg
+[preview2_1_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1/ReadmeSource/IMG_2_1/1_Preview.png
+[ref2_1_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1
 
 
 

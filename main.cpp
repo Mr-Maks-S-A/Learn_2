@@ -100,54 +100,66 @@ std::string get_input(const std::string& prompt,
 
 
 // Определение структуры для хранения информации о банковском счёте
-struct BankAccount {
-    uint64_t accountNumber;     //только положительное целое число
-    long double balance;   //деньги
-    std::string ownerName;      //имя владельца
+struct Address {
+    uint64_t Index;              //индекс
+    uint64_t HomeNumber;         //номер дома
+    uint64_t ApartmentNumber;    //номер квартиры
+    std::string City;            //Город
+    std::string Street;          //улица
 };
 
 
 /**
- * @brief Выводит информацию о банковском счёте в консоль.
+ * @brief Выводит информацию структуре счёте в консоль.
  * @param account Константная ссылка на структуру счёта.
  */
-void print_account(const BankAccount& account) {
-    std::cout << "\n===============================\n"
-    << "Ваш счёт: "
-    << account.ownerName        <<", "
-    << account.accountNumber    <<", "
-    << std::fixed << std::setprecision(2) << account.balance << "\n" /*форматируем для точного вывода каждой копейки*/
-    << "===============================\n\n";
+void print_address(const Address& account) {
+    std::cout << "\n========================================\n"
+    << "Город          : " << account.City <<std::endl
+    << "Улица          : " << account.Street <<std::endl
+    << "Номер дома     : " << account.HomeNumber <<std::endl
+    << "Номер квартиры : " << account.ApartmentNumber <<std::endl
+    << "Индекс         : " << account.Index <<std::endl
+    << "========================================\n\n";
 };
 
-
-void update_balance(BankAccount& account, double new_balance) {
-    account.balance = new_balance;
-}
 
 int main() {
     // Устанавливаем локаль для корректного вывода кириллицы в консоль
     std::setlocale(LC_ALL, "Russian");
 
-    BankAccount userAccount;
+    std::cout << "=== Настройка первого адреса ===\n";
+    Address firstAddress;
+    firstAddress.City            = get_input<std::string>("Введите город: ", 1, 100);
+    firstAddress.Street          = get_input<std::string>("Введите улицу: ", 1, 100);
+    firstAddress.HomeNumber      = get_input<uint64_t>("Введите номер дома: ", 1);
+    firstAddress.ApartmentNumber = get_input<uint64_t>("Введите номер квартиры: ", 1);
+    firstAddress.Index           = get_input<uint64_t>("Введите индекс (до 6 знаков): ", 1, 999999);
 
-    // 1. Заполняем поля структуры с помощью нашего универсального get_input
-    userAccount.accountNumber = get_input<uint64_t>("Введите номер счёта: ", 0);
-    userAccount.ownerName     = get_input<std::string>("Введите имя владельца: ", 1, 50);
-    userAccount.balance       = get_input<double>("Введите баланс: ");
+    std::cout << "\nРезультат вывода:\n";
+    print_address(firstAddress);
 
-    // 1.5 Выводим результат
-    print_account(userAccount);
 
-    // 2. Запрашиваем новый баланс
-    double nextBalance = get_input<double>("Введите новый баланс: ", 0.0);
+    std::cout << "=== Демонстрация готовых экземпляров (Пример работы) ===\n";
+    Address moscowAddress = {
+        123456,
+        12,
+        8,
+        "Москва",
+        "Арбат"
+    };
 
-    // 3. Модифицируем структуру через функцию
-    update_balance(userAccount, nextBalance);
+    Address izhevskAddress = {
+        953769,
+        59,
+        143,
+        "Ижевск",
+        "Пушкина"
+    };
 
-    // 3.5 Выводим результат
-    print_account(userAccount);
-
+    std::cout << "\nРезультат вывода:\n";
+    print_address(moscowAddress);
+    print_address(izhevskAddress);
 
     return EXIT_SUCCESS;
 }

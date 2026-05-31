@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 4.0)
-project(Worc-2_1_Accounts VERSION 2.1.2 LANGUAGES CXX)
+project(Worc-2_1_Output_structure VERSION 2.1.3 LANGUAGES CXX)
 
 # --- 1. Глобальные настройки проекта ---
 set(CMAKE_CXX_STANDARD 20)

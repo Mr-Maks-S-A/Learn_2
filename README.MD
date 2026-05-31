@@ -116,25 +116,25 @@ cmake --build build --parallel
 |  ![][status2_10_4] | `2.10.4` | Иерархия классов в DLL, проекты VC++.| ![Preview][preview2_10_4] | [![Ref][github_badge]][ref2_10_4] |
 |  ![][status2_10_5] | `2.10.5` | Иерархия классов в DLL и CMake.| ![Preview][preview2_10_5] | [![Ref][github_badge]][ref2_10_5] |
 
-[status2_10_5]: v2_10_5/ReadmeSource/Status/status.svg
-[preview2_10_5]: v2_10_5/ReadmeSource/IMG_2_10/5_Preview.png
-[ref2_10_5]: v2_10_5
+[status2_10_5]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_10_5/ReadmeSource/Status/status.svg
+[preview2_10_5]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_10_5/ReadmeSource/IMG_2_10/5_Preview.png
+[ref2_10_5]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_10_5
 
-[status2_10_4]: v2_10_4/ReadmeSource/Status/status.svg
-[preview2_10_4]: v2_10_4/ReadmeSource/IMG_2_10/4_Preview.png
-[ref2_10_4]: v2_10_4
+[status2_10_4]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_10_4/ReadmeSource/Status/status.svg
+[preview2_10_4]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_10_4/ReadmeSource/IMG_2_10/4_Preview.png
+[ref2_10_4]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_10_4
 
-[status2_10_3]: v2_10_3/ReadmeSource/Status/status.svg
-[preview2_10_3]: v2_10_3/ReadmeSource/IMG_2_10/3_Preview.png
-[ref2_10_3]: v2_10_3
+[status2_10_3]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_10_3/ReadmeSource/Status/status.svg
+[preview2_10_3]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_10_3/ReadmeSource/IMG_2_10/3_Preview.png
+[ref2_10_3]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_10_3
 
-[status2_10_2]: v2_10_2/ReadmeSource/Status/status.svg
-[preview2_10_2]: v2_10_2/ReadmeSource/IMG_2_10/2_Preview.png
-[ref2_10_2]: v2_10_2
+[status2_10_2]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_10_2/ReadmeSource/Status/status.svg
+[preview2_10_2]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_10_2/ReadmeSource/IMG_2_10/2_Preview.png
+[ref2_10_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_10_2
 
-[status2_10_1]: v2_10_1/ReadmeSource/Status/status.svg
-[preview2_10_1]: v2_10_1/ReadmeSource/IMG_2_10/1_Preview.png
-[ref2_10_1]: v2_10_1
+[status2_10_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_10_1/ReadmeSource/Status/status.svg
+[preview2_10_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_10_1/ReadmeSource/IMG_2_10/1_Preview.png
+[ref2_10_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_10_1
 
 </details>
 
@@ -147,13 +147,13 @@ cmake --build build --parallel
 |  ![][status2_9_1] | `2.9.1` | Простейший проект.| ![Preview][preview2_9_1] | [![Ref][github_badge]][ref2_9_1] |
 |  ![][status2_9_2] | `2.9.2` | Проект посложнее.| ![Preview][preview2_9_2] | [![Ref][github_badge]][ref2_9_2] |
 
-[status2_9_2]: v2_9_2/ReadmeSource/Status/status.svg
-[preview2_9_2]: v2_9_2/ReadmeSource/IMG_2_9/2_Preview.png
-[ref2_9_2]: v2_9_2
+[status2_9_2]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_9_2/ReadmeSource/Status/status.svg
+[preview2_9_2]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_9_2/ReadmeSource/IMG_2_9/2_Preview.png
+[ref2_9_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_9_2
 
-[status2_9_1]: v2_9_1/ReadmeSource/Status/status.svg
-[preview2_9_1]: v2_9_1/ReadmeSource/IMG_2_9/1_Preview.png
-[ref2_9_1]: v2_9_1
+[status2_9_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_9_1/ReadmeSource/Status/status.svg
+[preview2_9_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_9_1/ReadmeSource/IMG_2_9/1_Preview.png
+[ref2_9_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_9_1
 
 
 </details>
@@ -167,13 +167,13 @@ cmake --build build --parallel
 |  ![][status2_8_1] | `2.8.1` | Сравнения в дробях.| ![Preview][preview2_8_1] | [![Ref][github_badge]][ref2_8_1] |
 |  ![][status2_8_2] | `2.8.2` | Остальные операции с дробями.| ![Preview][preview2_8_2] | [![Ref][github_badge]][ref2_8_2] |
 
-[status2_8_2]: v2_8_2/ReadmeSource/Status/status.svg
-[preview2_8_2]: v2_8_2/ReadmeSource/IMG_2_8/2_Preview.png
-[ref2_8_2]: v2_8_2
+[status2_8_2]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_8_2/ReadmeSource/Status/status.svg
+[preview2_8_2]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_8_2/ReadmeSource/IMG_2_8/2_Preview.png
+[ref2_8_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_8_2
 
-[status2_8_1]: v2_8_1/ReadmeSource/Status/status.svg
-[preview2_8_1]: v2_8_1/ReadmeSource/IMG_2_8/1_Preview.png
-[ref2_8_1]: v2_8_1
+[status2_8_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_8_1/ReadmeSource/Status/status.svg
+[preview2_8_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_8_1/ReadmeSource/IMG_2_8/1_Preview.png
+[ref2_8_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_8_1
 
 </details>
 
@@ -186,13 +186,13 @@ cmake --build build --parallel
 |  ![][status2_7_1] | `2.7.1` | Простое исключение.| ![Preview][preview2_7_1] | [![Ref][github_badge]][ref2_7_1] |
 |  ![][status2_7_2] | `2.7.2` | Исключения в конструкторах.| ![Preview][preview2_7_2] | [![Ref][github_badge]][ref2_7_2] |
 
-[status2_7_2]: v2_7_2/ReadmeSource/Status/status.svg
-[preview2_7_2]: v2_7_2/ReadmeSource/IMG_2_7/2_Preview.png
-[ref2_7_2]: v2_7_2
+[status2_7_2]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_7_2/ReadmeSource/Status/status.svg
+[preview2_7_2]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_7_2/ReadmeSource/IMG_2_7/2_Preview.png
+[ref2_7_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_7_2
 
-[status2_7_1]: v2_7_1/ReadmeSource/Status/status.svg
-[preview2_7_1]: v2_7_1/ReadmeSource/IMG_2_7/1_Preview.png
-[ref2_7_1]: v2_7_1
+[status2_7_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_7_1/ReadmeSource/Status/status.svg
+[preview2_7_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_7_1/ReadmeSource/IMG_2_7/1_Preview.png
+[ref2_7_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_7_1
 
 </details>
 
@@ -205,13 +205,13 @@ cmake --build build --parallel
 |  ![][status2_6_1] | `2.6.1` | Препроцессорные директивы.| ![Preview][preview2_6_1] | [![Ref][github_badge]][ref2_6_1] |
 |  ![][status2_6_2] | `2.6.2` | Макрос SUB.| ![Preview][preview2_6_2] | [![Ref][github_badge]][ref2_6_2] |
 
-[status2_6_2]: v2_6_2/ReadmeSource/Status/status.svg
-[preview2_6_2]: v2_6_2/ReadmeSource/IMG_2_6/2_Preview.png
-[ref2_6_2]: v2_6_2
+[status2_6_2]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_6_2/ReadmeSource/Status/status.svg
+[preview2_6_2]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_6_2/ReadmeSource/IMG_2_6/2_Preview.png
+[ref2_6_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_6_2
 
-[status2_6_1]: v2_6_1/ReadmeSource/Status/status.svg
-[preview2_6_1]: v2_6_1/ReadmeSource/IMG_2_6/1_Preview.png
-[ref2_6_1]: v2_6_1
+[status2_6_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_6_1/ReadmeSource/Status/status.svg
+[preview2_6_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_6_1/ReadmeSource/IMG_2_6/1_Preview.png
+[ref2_6_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_6_1
 
 </details>
 
@@ -225,17 +225,17 @@ cmake --build build --parallel
 |  ![][status2_5_2] | `2.5.2` | Класс.| ![Preview][preview2_5_2] | [![Ref][github_badge]][ref2_5_2] |
 |  ![][status2_5_3] | `2.5.3` | Иерархия классов.| ![Preview][preview2_5_3] | [![Ref][github_badge]][ref2_5_3] |
 
-[status2_5_3]: v2_5_3/ReadmeSource/Status/status.svg
-[preview2_5_3]: v2_5_3/ReadmeSource/IMG_2_5/3_Preview.png
-[ref2_5_3]: v2_5_3
+[status2_5_3]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_5_3/ReadmeSource/Status/status.svg
+[preview2_5_3]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_5_3/ReadmeSource/IMG_2_5/3_Preview.png
+[ref2_5_3]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_5_3
 
-[status2_5_2]: v2_5_2/ReadmeSource/Status/status.svg
-[preview2_5_2]: v2_5_2/ReadmeSource/IMG_2_5/2_Preview.png
-[ref2_5_2]: v2_5_2
+[status2_5_2]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_5_2/ReadmeSource/Status/status.svg
+[preview2_5_2]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_5_2/ReadmeSource/IMG_2_5/2_Preview.png
+[ref2_5_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_5_2
 
-[status2_5_1]: v2_5_1/ReadmeSource/Status/status.svg
-[preview2_5_1]: v2_5_1/ReadmeSource/IMG_2_5/1_Preview.png
-[ref2_5_1]: v2_5_1
+[status2_5_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_5_1/ReadmeSource/Status/status.svg
+[preview2_5_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_5_1/ReadmeSource/IMG_2_5/1_Preview.png
+[ref2_5_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_5_1
 
 </details>
 
@@ -250,17 +250,17 @@ cmake --build build --parallel
 |  ![][status2_4_3] | `2.4.3` |Фигуры. Методы.| ![Preview][preview2_4_3] | [![Ref][github_badge]][ref2_4_3] |
 
 
-[status2_4_3]: v2_4_3/ReadmeSource/Status/status.svg
-[preview2_4_3]: v2_4_3/ReadmeSource/IMG_2_4/3_Preview.png
-[ref2_4_3]: v2_4_3
+[status2_4_3]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_4_3/ReadmeSource/Status/status.svg
+[preview2_4_3]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_4_3/ReadmeSource/IMG_2_4/3_Preview.png
+[ref2_4_3]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_4_3
 
-[status2_4_2]: v2_4_2/ReadmeSource/Status/status.svg
-[preview2_4_2]: v2_4_2/ReadmeSource/IMG_2_4/2_Preview.png
-[ref2_4_2]: v2_4_2
+[status2_4_2]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_4_2/ReadmeSource/Status/status.svg
+[preview2_4_2]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_4_2/ReadmeSource/IMG_2_4/2_Preview.png
+[ref2_4_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_4_2
 
-[status2_4_1]: v2_4_1/ReadmeSource/Status/status.svg
-[preview2_4_1]: v2_4_1/ReadmeSource/IMG_2_4/1_Preview.png
-[ref2_4_1]: v2_4_1
+[status2_4_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_4_1/ReadmeSource/Status/status.svg
+[preview2_4_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_4_1/ReadmeSource/IMG_2_4/1_Preview.png
+[ref2_4_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_4_1
 
 
 </details>
@@ -275,13 +275,13 @@ cmake --build build --parallel
 |  ![][status2_3_2] | `2.3.2` | Сортируем адреса.| ![Preview][preview2_3_2] | [![Ref][github_badge]][ref2_3_2] |
 
 
-[status2_3_2]: v2_3_2/ReadmeSource/Status/status.svg
-[preview2_3_2]: v2_3_2/ReadmeSource/IMG_2_3/2_Preview.png
-[ref2_3_2]: v2_3_2
+[status2_3_2]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_3_2/ReadmeSource/Status/status.svg
+[preview2_3_2]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_3_2/ReadmeSource/IMG_2_3/2_Preview.png
+[ref2_3_2]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_3_2
 
-[status2_3_1]: v2_3_1/ReadmeSource/Status/status.svg
-[preview2_3_1]: v2_3_1/ReadmeSource/IMG_2_3/1_Preview.png
-[ref2_3_1]: v2_3_1
+[status2_3_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_3_1/ReadmeSource/Status/status.svg
+[preview2_3_1]: https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_3_1/ReadmeSource/IMG_2_3/1_Preview.png
+[ref2_3_1]: https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_3_1
 
 
 </details>

@@ -12,27 +12,29 @@
 
 <div align="left">
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1"><img src="https://img.shields.io/badge/⏮️_Первый-v2.1.1-gray?style=flat" height="22"></a>
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_2"><img src="https://img.shields.io/badge/◀️_Назад-v2.1.2-blue?style=flat" height="22"></a> 
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_1"><img src="https://img.shields.io/badge/Вперед_▶️-v2.2.1-blue?style=flat" height="22"></a>
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_3"><img src="https://img.shields.io/badge/◀️_Назад-v2.1.3-blue?style=flat" height="22"></a> 
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_2_2"><img src="https://img.shields.io/badge/Вперед_▶️-v2.2.2-blue?style=flat" height="22"></a>
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v_latest"><img src="https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat" height="22"></a>
 </div>
 
 ---
 
 <div align="right">
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_1_3/main.cpp">
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_2_1/main.cpp">
     <img src="https://img.shields.io/badge/Source_Code-blue?style=social&logo=github" height="25">
   </a>
 </div>
 
 <div align="center">
 
-#  Проект: Вывод структуры.
-Программа для работы с созданной структурой адреса.<br>
+#  Проект: Калькулятор двух чисел
+Программа для работы с созданным классом калькулятора.<br>
+По собственному желанию дописаны минимальные тесты (они спасли меня от ошибуи с || где я пытался в проверке присваивать значения а присваивалось только 1 из двух,<br> так как или работает с приоритетом и отбрасывает последующюю проверку если первая true) <br>
 
-> **Примечание:** Используется структуры и старые наброски кода.<br>
+> **Примечание:** Используется классы ,старые наброски кода.<br>
+**Дополнительно использовались шаблоный в рамках самообучения**<br>
 Повторно использовались решения:<br> 
-[![Ref](https://img.shields.io/badge/ref-v2.1.2-blue?style=flat-square&logo=github)](https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_2) исходник функции **print_account/вывод структуры**<br>
+[![Ref](https://img.shields.io/badge/ref-v2.1.3-blue?style=flat-square&logo=github)](https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_3) исходник функции **get**<br>
 </div>
 
 
@@ -56,18 +58,113 @@
 ## 🚀 Пример работы программы
 
 ### Preview
-![][preview2_1_3]
+![][preview2_2_1]
 
 ### Вывод в консоль
 
 ```bash
+/m/H/!/0/Learn_2►./build/bin/Worc-2_2_Two_number_calculator                                                   
+Введите num1: 12
+Введите num2: 12
+num1 + num2 = 24.000000
+num1 - num2 = 0.000000
+num2 - num1 = 0.000000
+num1 * num2 = 144.000000
+num1 / num2 = 1.000000
+num2 / num1 = 1.000000
 
+
+=== Введите 'q' для выхода или нажмите Enter, чтобы продолжить ===
+
+Введите num1: 22
+Введите num2: 22
+num1 + num2 = 44.000000
+num1 - num2 = 0.000000
+num2 - num1 = 0.000000
+num1 * num2 = 484.000000
+num1 / num2 = 1.000000
+num2 / num1 = 1.000000
+
+
+=== Введите 'q' для выхода или нажмите Enter, чтобы продолжить ===
+
+Введите num1: 0
+Ошибка: это конкретное значение (0.000000) запрещено для ввода.
+Введите num1: 1
+Введите num2: 0
+Ошибка: это конкретное значение (0.000000) запрещено для ввода.
+Введите num2: 2
+num1 + num2 = 3.000000
+num1 - num2 = -1.000000
+num2 - num1 = 1.000000
+num1 * num2 = 2.000000
+num1 / num2 = 0.500000
+num2 / num1 = 2.000000
+
+
+=== Введите 'q' для выхода или нажмите Enter, чтобы продолжить ===
+q
+```
+
+```bash
+/m/H/!/0/Learn_2►./build/bin/Worc-2_2_Two_number_calculator                                    
+[SYSTEM]: Запуск комплексных Unit-тестов...
+Ошибка: переменные не могут равняться 0!
+Ошибка: переменные не могут равняться 0!
+[LOG]: Вызван конструктор c параметрами new_num1 new_num2 Calculator
+num1 = 10
+num2 = 2
+Ошибка: переменные не могут равняться 0!
+Ошибка: переменные не могут равняться 0!
+[LOG]: Вызван конструктор c параметрами new_num1 new_num2 Calculator
+num1 = 3000000000
+num2 = 1000000000
+Ошибка: переменные не могут равняться 0!
+Ошибка: переменные не могут равняться 0!
+[LOG]: Вызван конструктор c параметрами new_num1 new_num2 Calculator
+num1 = 10
+num2 = 5
+Ошибка: переменные не могут равняться 0!
+Ошибка: переменные не могут равняться 0!
+[LOG]: Вызван конструктор c параметрами new_num1 new_num2 Calculator
+num1 = 7.5
+num2 = 2.5
+Ошибка: переменные не могут равняться 0!
+Ошибка: переменные не могут равняться 0!
+[LOG]: Вызван конструктор c параметрами new_num1 new_num2 Calculator
+num1 = 0.5
+num2 = 0.25
+[LOG]: Вызван конструктор по умолчанию Calculator
+num1 = 1
+num2 = 1
+[SYSTEM]: Все Unit-тесты для разрешенных модификаторов успешно пройдены!
+
+[LOG]: Вызван конструктор по умолчанию Calculator
+num1 = 1
+num2 = 1
+Введите num1: 12
+Введите num2: 12
+num1 + num2 = 24.000000
+num1 - num2 = 0.000000
+num2 - num1 = 0.000000
+num1 * num2 = 144.000000
+num1 / num2 = 1.000000
+num2 / num1 = 1.000000
+
+
+=== Введите 'q' для выхода или нажмите Enter, чтобы продолжить ===
+q
 ```
 
 #  Команды для сборки
 
 ```bash
 cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug 
+```
+
+для передачи параметров чтобы включить тестирование
+```bash
+cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_FLAGS="-DDEBUG_MODE -DENABLE_LOGGING"
 ```
 
 ```bash

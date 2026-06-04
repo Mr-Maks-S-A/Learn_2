@@ -427,7 +427,7 @@ cmake --build build --parallel
 
 </details>
 
-<details>
+<details open>
 <summary><b>📂 2.3.0 ООП: абстракция и инкапсуляция. </b></summary>
 <br>
 
@@ -449,7 +449,7 @@ cmake --build build --parallel
 </details>
 
 
-<details open>
+<details >
 <summary><b>📂 2.2.0 Классы и объекты </b></summary>
 <br>
 

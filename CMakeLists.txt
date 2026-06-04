@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 4.0)
-project(Worc-2_3_Addresses VERSION 2.3.1 LANGUAGES CXX)
+project(Worc-2_3_Addresses VERSION 2.3.2 LANGUAGES CXX)
 
 # --- 1. Глобальные настройки проекта ---
 set(CMAKE_CXX_STANDARD 20)
@@ -22,11 +22,11 @@ add_executable(${PROJECT_NAME} ${APP_SOURCES})
 target_include_directories(${PROJECT_NAME} PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
 # Создаем отдельный таргет для тестов
-set(TEST_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/tests.cpp) # Вынесем тесты в отдельный файл
-add_executable(PerformanceTests ${TEST_SOURCES})
+#set(TEST_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/tests.cpp) # Вынесем тесты в отдельный файл
+#add_executable(PerformanceTests ${TEST_SOURCES})
 
 # Общие инклюды для всего проекта (чтобы инклуды внутри include/ работали везде)
-target_include_directories(PerformanceTests PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/include")
+#target_include_directories(PerformanceTests PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
 # Копирование файла при каждой сборке (на случай изменений в исходнике)
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD

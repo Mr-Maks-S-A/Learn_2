@@ -1,114 +1,121 @@
 #include <cstdint>
 #include <iostream> // Для потоков ввода/вывода
-#include <clocale>  // Библиотека для работы с локалью
+#include <locale> // Библиотека для работы с локалью
 #include <cstdlib>  // Для макросов EXIT_SUCCESS
 
+#include <vector>
+#include <string_view>
 #include <string>
+#include <cctype>
+#include <cwctype>
+#include <unordered_map>
 
-class Counter {
+#include <fstream>
+
+#include <MySmartType.hpp> //моя кастомная наработка для создания умных типов данных по политикам
+
+
+
+
+
+class Addresse {
 private:
-    int m_value; // Приватное поле, закрытое от внешнего мира
+    uint32_t m_house = 0;
+    uint32_t m_apartment = 0;
+    
+    CacheString m_city;
+    CacheString m_street;
 
 public:
-    // Конструктор по умолчанию (начальное значение 1)
-    Counter() : m_value(1) {
-        std::cout << "Вызван счётчик по умолчанию >> значение равно = "<< m_value<<std::endl;
-    };
+    // Конструктор исправлен: имена полей приведены в соответствие, добавлен std::move
+    Addresse(std::string new_city
+            ,std::string new_street
+            ,uint32_t new_house
+            ,uint32_t new_apartment): m_house(new_house)
+                                     ,m_apartment(new_apartment)
+                                     ,m_city(std::move(new_city))
+                                     ,m_street(std::move(new_street)) {}
 
-    // Конструктор с заданным начальным значением
-    Counter(int initial_value) : m_value(initial_value) {
-        std::cout << "Вызван счётчик c параметром >> значение равно = "<< m_value<<std::endl;
-    }
-
-    ~Counter() = default;
-
-    // Метод увеличения на 1
-    void increment() {
-        m_value++;
-    }
-
-    // Метод уменьшения на 1
-    void decrement() {
-        m_value--;
-    }
-
-    // Метод просмотра текущего значения (const, так как не меняет состояние объекта)
-    int get_value() const {
-        return m_value;
+    ~Addresse() = default;
+        
+    [[nodiscard]] std::string get_output_address() const {
+        using namespace std::string_literals;
+        
+        // Сборка строки работает автоматически за счет неявного вызова оператора приведения в SmartVar/CacheString
+        return ""s + m_city + ", " + m_street + ", " + 
+               std::to_string(m_house) + ", " + std::to_string(m_apartment);
     }
 };
 
 
-void test(Counter &counter){
-
-    char command;
-    while (true) {
-        std::cout << "Введите команду ('+', '-', '=' или 'q'): ";
-        std::cin >> command;
-
-        if (command == 'q' || command == 'Q') {
-            std::cout << "До свидания!\n";
-            break;
-        }
-
-        switch (command) {
-            case '+':
-                counter.increment();
-                break;
-            case '-':
-                counter.decrement();
-                break;
-            case '=':
-                std::cout << counter.get_value() << "\n";
-                break;
-            default:
-                std::cout << "Неизвестная команда!\n";
-                break;
-        }
-    }
-
-}
-
-
 int main() {
     // Устанавливаем локаль для корректного вывода кириллицы в консоль
-    std::setlocale(LC_ALL, "Russian");
+    std::setlocale(LC_ALL, "ru_RU.UTF-8");
 
+    // 1. Открываем файл для чтения
+    std::ifstream in_file("Sorce/in.txt");
+    if (!in_file.is_open()) {
+        std::cerr << "Не удалось открыть файл in.txt для чтения!" << std::endl;
+        return EXIT_FAILURE;
+    }
 
-    do{
-        std::string answer;
-        std::cout << "Вы хотите указать начальное значение счётчика? Введите да(y/yes/lf) или нет(n/no): ";
-        std::cin >> answer;
+    int count = 0;
+    if (!(in_file >> count)) {
+        std::cerr << "Ошибка чтения количества адресов!" << std::endl;
+        return EXIT_FAILURE;
+    }
+    
+    // Сбрасываем оставшийся символ новой строки (\n) после чтения числа, 
+    // чтобы последующий std::getline не прочитал пустую строку.
+    in_file.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-        // Вспомогательная лямбда или тернарный оператор для получения начального значения
-        int initial_val = 1;
-        if (   answer == "да"
-            || answer == "y"
-            || answer == "Y"
-            || answer == "yes" 
-            || answer == "if") {
-            std::cout << "Введите начальное значение счётчика: ";
-            std::cin >> initial_val;
-            Counter counter(initial_val);
-            test(counter);
-        }else{
-            Counter counter;
-            test(counter);
+    // Контейнер для хранения объектов
+    std::vector<Addresse> addresses;
+    addresses.reserve(count); // Оптимизация выделения памяти
+
+    // 2. Построчное чтение блоков адресов
+    for (int i = 0; i < count; ++i) {
+        std::string city;
+        std::string street;
+        uint32_t house = 0;
+        uint32_t apartment = 0;
+
+        // Используем std::getline, так как в названиях городов/улиц могут быть пробелы (напр. "Нижний Новгород")
+        if (std::getline(in_file, city) &&
+            std::getline(in_file, street) &&
+            (in_file >> house) &&
+            (in_file >> apartment)) {
+            
+            // Сбрасываем \n после чтения чисел перед следующим циклом getline
+            in_file.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+            // Создаем объект. Тримминг и Capitalize отработают внутри конструктора через политики!
+            addresses.emplace_back(city, street, house, apartment);
+        } else {
+            std::cerr << "Предупреждение: Файл поврежден или закончился раньше времени на блоке " << i + 1 << std::endl;
+            break;
         }
+    }
+    in_file.close(); // Закрываем входной файл
 
-        // Перед чтением строки/символа ОЧИЩАЕМ буфер от остаточных '\n' из функции test()
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    // 3. Открываем файл для записи
+    std::ofstream out_file("Sorce/out.txt");
+    if (!out_file.is_open()) {
+        std::cerr << "Не удалось открыть файл out.txt для записи!" << std::endl;
+        return EXIT_FAILURE;
+    }
 
-        std::cout << "=== Введите 'q' для выхода или нажмите [Enter], чтобы повторить ===\n";
-        
-        // Читаем всю строку (если нажат просто Enter, строка будет пустой)
-        std::string choice;
-        std::getline(std::cin, choice);
+    // Записываем итоговое количество успешно прочитанных адресов
+    out_file << addresses.size() << "\n";
 
-        if (choice == "q" || choice == "Q") {
-            break; // Выходим из do-while
-        }
-    }while (true);
+    // Выводим адреса в обратном порядке при помощи обратных итераторов (reverse iterators)
+    for (auto it = addresses.rbegin(); it != addresses.rend(); ++it) {
+        out_file << it->get_output_address() << "\n";
+    }
+    out_file.close(); // Закрываем выходной файл
+
+    std::cout << "Обработка завершена успешно. Результат сохранен в out.txt" << std::endl;
+    return EXIT_SUCCESS;
 
     return EXIT_SUCCESS;
 }

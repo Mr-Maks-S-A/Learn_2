@@ -12,27 +12,27 @@
 
 <div align="left">
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1"><img src="https://img.shields.io/badge/⏮️_Первый-v2.1.1-gray?style=flat" height="22"></a>
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_3_1"><img src="https://img.shields.io/badge/◀️_Назад-v2.3.1-blue?style=flat" height="22"></a> 
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_4_1"><img src="https://img.shields.io/badge/Вперед_▶️-v2.4.1-blue?style=flat" height="22"></a>
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_3_2"><img src="https://img.shields.io/badge/◀️_Назад-v2.3.2-blue?style=flat" height="22"></a> 
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_4_2"><img src="https://img.shields.io/badge/Вперед_▶️-v2.4.2-blue?style=flat" height="22"></a>
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v_latest"><img src="https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat" height="22"></a>
 </div>
 
 ---
 
 <div align="right">
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_3_2/main.cpp">
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_4_1/main.cpp">
     <img src="https://img.shields.io/badge/Source_Code-blue?style=social&logo=github" height="25">
   </a>
 </div>
 
 <div align="center">
 
-#  Проект: Сортируем адреса
-Создание класса для обработки адресов из файла и запись в другой файл.<br>
-Дополнительно в виду самостоятельного эксперемента создан концепт умных переменных на основе политик.<br>
+#  Проект: Фигуры. Количество сторон.
+Просто практика OOP.<br>
  
 
-> **Примечание:** Используется классы ,старые наброски кода.<br>
+> **Примечание:** Используется классы ,старые наброски кода.<br>Дополнительно реализован рендеринг иерархии простой.<br>
+
 </div>
 
 
@@ -56,67 +56,30 @@
 ## 🚀 Пример работы программы
 
 ### Preview
-![][preview2_3_2]
+![][preview2_4_1]
 
 ### Вывод в консоль
 
 ```bash
-/m/H/!/0/L/b/bin►./Worc-2_3_Addresses                             
-Обработка и сортировка завершены успешно. Результат сохранен в out.txt
-/m/H/!/0/L/b/bin►cat ./Sorce/out.txt               
-10
-Москва, Строителей, 34, 12
-Москва, Строителей, 30, 1
-Москва, Строителей, 22, 22
-Москва, Строителей, 44, 1
-Новосибирск, Мира, 85, 64
-Новосибирск, Мира, 85, 64
-Новосибирск, Строителей, 88, 64
-Новосибирск, Гоголя, 88, 65
-Омск, Пушкина, 2, 13
-Омск, Мира, 2, 13
-/m/H/!/0/L/b/bin►cat ./Sorce/in.txt   
-10
-москва
-Строителей
-34
-12
-Омск
-пушкина
-2
-13
-новосибирск
-Мира
-85
-64
-москва
-Строителей
-30
-1
-москва
-Строителей
-22
-22
-москва
-Строителей
-44
-1
-Омск
-Мира
-2
-13
-новосибирск
-Мира
-85
-64
-новосибирск
-Строителей
-88
-64
-новосибирск
-Гоголя
-88
-65⏎
+/m/H/!/0/Learn_2►./build/bin/Worc-2_4_Shapes_number_of_sides                                                                
+Количество сторон:
+Фигура: 0
+Треугольник: 3
+Четырёхугольник: 4
+
+
+--- Рендер Иерархии для объекта класса Figure ---
+Figure
+
+
+--- Рендер Иерархии для объекта класса Triangle ---
+Figure
+  |-- Triangle
+
+
+--- Рендер Иерархии для объекта класса Quadrangle ---
+Figure
+  |-- Quadrangle
 ```
 
 
@@ -275,7 +238,7 @@ cmake --build build --parallel
 
 </details>
 
-<details>
+<details open>
 <summary><b>📂 2.4.0 ООП: наследование и полиморфизм. </b></summary>
 <br>
 
@@ -301,7 +264,7 @@ cmake --build build --parallel
 
 </details>
 
-<details open>
+<details >
 <summary><b>📂 2.3.0 ООП: абстракция и инкапсуляция. </b></summary>
 <br>
 

@@ -1,112 +1,94 @@
 #include <cstdint>
 #include <iostream> 
 #include <locale> 
-#include <cstdlib>  
-#include <vector>
-#include <string_view>
 #include <string>
-#include <cctype>
-#include <cwctype>
-#include <unordered_map>
-#include <fstream>
-#include <algorithm> // Добавлено для std::sort
-#include <limits>
 
-#include <MySmartType.hpp> 
+#include <MyRedererOOP.hpp> 
 
-class Addresse {
-private:
-    uint32_t m_house = 0;
-    uint32_t m_apartment = 0;
-    
-    CacheString m_city;
-    CacheString m_street;
+
+// Базовый класс для всех фигур
+class Figure {
+protected:
+    int sides_count;
+    std::string name;
 
 public:
-    Addresse(std::string new_city,
-             std::string new_street,
-             uint32_t new_house,
-             uint32_t new_apartment) 
-        : m_house(new_house),
-          m_apartment(new_apartment),
-          m_city(std::move(new_city)),
-          m_street(std::move(new_street)) {}
+    // Конструктор по умолчанию для неизвестной фигуры
+    Figure() : sides_count(0), name("Фигура") {}
 
-    ~Addresse() = default;
-        
-    // Геттер для получения имени города (возвращает std::string_view из кэша без аллокаций)
-    [[nodiscard]] std::string_view get_city() const {
-        return static_cast<const std::string&>(m_city);
+    // Геттер для получения количества сторон
+    int get_sides_count() const {
+        return sides_count;
     }
 
-    [[nodiscard]] std::string get_output_address() const {
-        using namespace std::string_literals;
-        return ""s + m_city + ", " + m_street + ", " + 
-               std::to_string(m_house) + ", " + std::to_string(m_apartment);
+    // Геттер для получения названия фигуры
+    std::string get_name() const {
+        return name;
+    }
+    virtual ~Figure() = default;
+    // Каждый класс просто рендерит себя, передавая свой тип в шаблон
+    virtual void render_hierarchy() const { render_class_line<Figure>("Figure"); }
+};
+
+
+// Класс Треугольник, наследуется от Figure
+class Triangle : public Figure {
+public:
+    Triangle() {
+        sides_count = 3;
+        name = "Треугольник";
+    }
+    void render_hierarchy() const override {
+        // Сначала просим родителя нарисовать верхнюю часть дерева
+        Figure::render_hierarchy(); 
+        // Затем рисуем себя
+        render_class_line<Triangle>("Triangle");
     }
 };
 
-int main() {
-    std::setlocale(LC_ALL, "ru_RU.UTF-8");
-
-    std::ifstream in_file("Sorce/in.txt");
-    if (!in_file.is_open()) {
-        std::cerr << "Не удалось открыть файл in.txt для чтения!" << std::endl;
-        return EXIT_FAILURE;
+// Класс Четырёхугольник, наследуется от Figure
+class Quadrangle : public Figure {
+public:
+    Quadrangle() {
+        sides_count = 4;
+        name = "Четырёхугольник";
     }
-
-    int count = 0;
-    if (!(in_file >> count)) {
-        std::cerr << "Ошибка чтения количества адресов!" << std::endl;
-        return EXIT_FAILURE;
-    }
-    
-    in_file.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-    std::vector<Addresse> addresses;
-    addresses.reserve(count); 
-
-    for (int i = 0; i < count; ++i) {
-        std::string city;
-        std::string street;
-        uint32_t house = 0;
-        uint32_t apartment = 0;
-
-        if (std::getline(in_file, city) &&
-            std::getline(in_file, street) &&
-            (in_file >> house) &&
-            (in_file >> apartment)) {
-            
-            in_file.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            addresses.emplace_back(std::move(city), std::move(street), house, apartment);
-        } else {
-            std::cerr << "Предупреждение: Файл поврежден или закончился раньше времени на блоке " << i + 1 << std::endl;
-            break;
+    void render_hierarchy() const override {
+            // Сначала просим родителя нарисовать верхнюю часть дерева
+            Figure::render_hierarchy(); 
+            // Затем рисуем себя
+            render_class_line<Quadrangle>("Quadrangle");
         }
-    }
-    in_file.close(); 
+};
 
-    // --- СОРТИРОВКА ПО АЛФАВИТУ ---
-    // Используем std::sort с лямбда-компаратором. Благодаря std::string_view
-    // сравнение строк происходит без копирования данных из кэша.
-    std::sort(addresses.begin(), addresses.end(), [](const Addresse& lhs, const Addresse& rhs) {
-        return lhs.get_city() < rhs.get_city();
-    });
 
-    std::ofstream out_file("Sorce/out.txt");
-    if (!out_file.is_open()) {
-        std::cerr << "Не удалось открыть файл out.txt для записи!" << std::endl;
-        return EXIT_FAILURE;
-    }
+// Регистрируем связи для метаданных
+REGISTER_PARENT(Triangle, Figure)
+REGISTER_PARENT(Quadrangle, Figure)
 
-    out_file << addresses.size() << "\n";
+int main() {
+    // Настройка локализации для корректного вывода кириллицы в консоли
+    std::setlocale(LC_ALL, "Russian");
 
-    // Выводим адреса по порядку (после сортировки они уже идут от А до Я)
-    for (const auto& addr : addresses) {
-        out_file << addr.get_output_address() << "\n";
-    }
-    out_file.close(); 
+    // Создаем экземпляры каждого класса
+    Figure generic_figure;
+    Triangle triangle;
+    Quadrangle quadrangle;
 
-    std::cout << "Обработка и сортировка завершены успешно. Результат сохранен в out.txt" << std::endl;
+    // Выводим информацию на консоль
+    std::cout << "Количество сторон:\n";
+    std::cout << generic_figure.get_name() << ": " << generic_figure.get_sides_count() << "\n";
+    std::cout << triangle.get_name() << ": " << triangle.get_sides_count() << "\n";
+    std::cout << quadrangle.get_name() << ": " << quadrangle.get_sides_count() << "\n\n\n";
+
+    std::cout << "--- Рендер Иерархии для объекта класса Figure ---\n";
+    generic_figure.render_hierarchy();
+
+    std::cout << "\n\n--- Рендер Иерархии для объекта класса Triangle ---\n";
+    triangle.render_hierarchy();
+
+    std::cout << "\n\n--- Рендер Иерархии для объекта класса Quadrangle ---\n";
+    quadrangle.render_hierarchy();
+    
     return EXIT_SUCCESS;
 }

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 4.0)
-project(Worc-2_3_Addresses VERSION 2.3.2 LANGUAGES CXX)
+project(Worc-2_4_Shapes_number_of_sides VERSION 2.4.1 LANGUAGES CXX)
 
 # --- 1. Глобальные настройки проекта ---
 set(CMAKE_CXX_STANDARD 20)

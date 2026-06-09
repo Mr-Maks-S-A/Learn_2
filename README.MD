@@ -12,22 +12,22 @@
 
 <div align="left">
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1"><img src="https://img.shields.io/badge/⏮️_Первый-v2.1.1-gray?style=flat" height="22"></a>
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_4_1"><img src="https://img.shields.io/badge/◀️_Назад-v2.4.1-blue?style=flat" height="22"></a> 
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_4_3"><img src="https://img.shields.io/badge/Вперед_▶️-v2.4.3-blue?style=flat" height="22"></a>
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_4_2"><img src="https://img.shields.io/badge/◀️_Назад-v2.4.2-blue?style=flat" height="22"></a> 
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_5_1"><img src="https://img.shields.io/badge/Вперед_▶️-v2.5.1-blue?style=flat" height="22"></a>
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v_latest"><img src="https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat" height="22"></a>
 </div>
 
 ---
 
 <div align="right">
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_4_2/main.cpp">
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_4_3/main.cpp">
     <img src="https://img.shields.io/badge/Source_Code-blue?style=social&logo=github" height="25">
   </a>
 </div>
 
 <div align="center">
 
-#  Проект: Фигуры. Стороны и углы
+#  Проект: Фигуры. Методы
 Просто практика OOP.<br>
  
 
@@ -56,99 +56,119 @@
 ## 🚀 Пример работы программы
 
 ### Preview
-![][preview2_4_2]
+![][preview2_4_3]
 
 ### Вывод в консоль
 
 ```bash
-/m/H/!/0/Learn_2►./build/bin/Worc-2_4_Figures_Sides_and_Angles
-Фигура (Сторон: 0):
-Иерархия типа:
+/m/H/!/0/Learn_2►./build/bin/Worc-2_4_Figures_Methods
+Фигура:
+Правильная
+Количество сторон: 0
+Иерархия типа :
 Figure
-
 -----------------------------------------
-Треугольник (Сторон: 3):
+Треугольник:
+Правильная
+Количество сторон: 3
 Стороны: a=10 b=20 c=30
 Углы: A=50 B=60 C=70
-Иерархия типа:
+Иерархия типа :
 Figure
   |-- Triangle
-
 -----------------------------------------
-Прямоугольный треугольник (Сторон: 3):
+Прямоугольный треугольник:
+Неправильная
+Количество сторон: 3
 Стороны: a=10 b=20 c=30
 Углы: A=50 B=60 C=90
-Иерархия типа:
+Иерархия типа :
 Figure
   |-- Triangle
   |  |-- RightTriangle
-
 -----------------------------------------
-Равнобедренный треугольник (Сторон: 3):
+Прямоугольный треугольник:
+Правильная
+Количество сторон: 3
+Стороны: a=10 b=20 c=30
+Углы: A=50 B=40 C=90
+Иерархия типа :
+Figure
+  |-- Triangle
+  |  |-- RightTriangle
+-----------------------------------------
+Равнобедренный треугольник:
+Неправильная
+Количество сторон: 3
 Стороны: a=10 b=20 c=10
 Углы: A=50 B=60 C=50
-Иерархия типа:
+Иерархия типа :
 Figure
   |-- Triangle
   |  |-- IsoscelesTriangle
-
 -----------------------------------------
-Равносторонний треугольник (Сторон: 3):
+Равносторонний треугольник:
+Правильная
+Количество сторон: 3
 Стороны: a=30 b=30 c=30
 Углы: A=60 B=60 C=60
-Иерархия типа:
+Иерархия типа :
 Figure
   |-- Triangle
   |  |-- EquilateralTriangle
-
 -----------------------------------------
-Четырёхугольник (Сторон: 4):
+Четырёхугольник:
+Неправильная
+Количество сторон: 4
 Стороны: a=10 b=20 c=30 d=40
 Углы: A=50 B=60 C=70 D=80
-Иерархия типа:
+Иерархия типа :
 Figure
   |-- Quadrangle
-
 -----------------------------------------
-Параллелограмм (Сторон: 4):
-Стороны: a=20 b=30 c=20 d=30
-Углы: A=30 B=40 C=30 D=40
-Иерархия типа:
-Figure
-  |-- Quadrangle
-  |  |-- Parallelogram
-
------------------------------------------
-Прямоугольник (Сторон: 4):
+Прямоугольник:
+Правильная
+Количество сторон: 4
 Стороны: a=10 b=20 c=10 d=20
 Углы: A=90 B=90 C=90 D=90
-Иерархия типа:
+Иерархия типа :
 Figure
   |-- Quadrangle
   |  |-- Parallelogram
   |  |  |-- RectangleFigure
-
 -----------------------------------------
-Ромб (Сторон: 4):
-Стороны: a=30 b=30 c=30 d=30
-Углы: A=30 B=40 C=30 D=40
-Иерархия типа:
-Figure
-  |-- Quadrangle
-  |  |-- Parallelogram
-  |  |  |-- Rhombus
-
------------------------------------------
-Квадрат (Сторон: 4):
+Квадрат:
+Правильная
+Количество сторон: 4
 Стороны: a=20 b=20 c=20 d=20
 Углы: A=90 B=90 C=90 D=90
-Иерархия типа:
+Иерархия типа :
 Figure
   |-- Quadrangle
   |  |-- Parallelogram
   |  |  |-- RectangleFigure
   |  |  |  |-- Square
-
+-----------------------------------------
+Параллелограмм:
+Неправильная
+Количество сторон: 4
+Стороны: a=20 b=30 c=20 d=30
+Углы: A=30 B=40 C=30 D=40
+Иерархия типа :
+Figure
+  |-- Quadrangle
+  |  |-- Parallelogram
+-----------------------------------------
+Ромб:
+Неправильная
+Количество сторон: 4
+Стороны: a=30 b=30 c=30 d=30
+Углы: A=30 B=40 C=30 D=40
+Иерархия типа :
+Figure
+  |-- Quadrangle
+  |  |-- Parallelogram
+  |  |  |-- Rhombus
 -----------------------------------------
 ```
 

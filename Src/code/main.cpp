@@ -1,84 +1,51 @@
 /**
  * @file main.cpp
- * @brief Главный файл программы демонстрации работы счётчика.
- * Использует утилиты безопасного ввода и инкапсулированный класс Counter
- * для работы с командами пользователя через консоль.
+ * @brief Главный файл программы для демонстрации полиморфной иерархии геометрических фигур.
+ * Выводит информацию о сторонах, углах и внутренней структуре наследования 
+ * для треугольников и четырёхугольников.
  */
 
-#include <iostream> 
 #include <cstdint>
+#include <iostream> 
 #include <locale> 
 #include <string>
-#include <limits>
-#include <stdexcept>
 
-#include <Counter/Counter.hpp>
-#include <Until/Input.hpp>
+#include <Figure/BranchOfQuadrancles.hpp>
+#include <Figure/BranchOfTriangles.hpp>
 
-
-void  worc(Counter &counter) {
-    while (true) {
-        // Используем перегрузку с include_list для строгого выбора команд
-        char command = get_input<char>(
-            "Введите команду ('+', '-', '=' или 'q'): ",
-            {'+', '-', '=', 'q', 'Q'}
-        );
-
-        if (command == 'q' || command == 'Q') {
-            std::cout << "До свидания!\n";
-            break;
-        }
-
-        switch (command) {
-            case '+':
-                counter.increment();
-                break;
-            case '-':
-                counter.decrement();
-                break;
-            case '=':
-                std::cout << counter.get_value() << "\n";
-                break;
-            default:
-                // Сюда код никогда не зайдёт, так как get_input отфильтрует всё остальное
-                break;
-        }
-    }
+void print_info(const Figure* fig) {
+    if (!fig) return;
+    std::cout << fig->get_name() << " (Сторон: " << fig->get_sides_count() << "):\n";
+    fig->print_sides();
+    fig->print_angles();
+    std::cout << "Иерархия типа:\n";
+    fig->render_hierarchy();
+    std::cout << "\n-----------------------------------------\n";
 }
 
 int main() {
     std::setlocale(LC_ALL, "Russian");
 
-    while (true) {
-        // Шаг 1. Строго проверяем ответ пользователя (да/нет) через include_list
-        // Передаем std::string, чтобы работали многосимвольные ответы
-        std::string answer = get_input<std::string>(
-            "Вы хотите указать начальное значение счётчика? Введите да(y/yes) или нет(n/no): ",
-            {"да", "y", "Y", "yes", "нет", "n", "N", "no"}
-        );
+    Figure generic_figure;
+    Triangle triangle(10, 20, 30, 50, 60, 70);
+    RightTriangle r_triangle(10, 20, 30, 50, 60);
+    IsoscelesTriangle i_triangle(10, 20, 50, 60);
+    EquilateralTriangle e_triangle(30);
 
-        // Шаг 2. Инициализация счётчика в зависимости от ответа
-        if (answer == "да" || answer == "y" || answer == "Y" || answer == "yes") {
-            // Используем первую перегрузку для безопасного ввода целого числа (int)
-            int initial_val = get_input<int>("Введите начальное значение счётчика: ");
-            
-            Counter counter(initial_val);
-             worc(counter);
-        } else {
-            Counter counter;
-             worc(counter);
-        }
+    Quadrangle quadrangle(10, 20, 30, 40, 50, 60, 70, 80);
+    Parallelogram parallelogram(20, 30, 30, 40);
+    RectangleFigure rectangle(10, 20);
+    Rhombus rhombus(30, 30, 40);
+    Square square(20);
 
-        // Шаг 3. Спрашиваем про выход или повтор
-        std::string choice = get_input<std::string>(
-            "=== Введите 'q' для выхода или 'c'/'continue' для повтора ===\n",
-            {"q", "Q", "c", "C", "continue"}
-        );
+    const Figure* figures[] = { 
+        &generic_figure, &triangle, &r_triangle, &i_triangle, &e_triangle, 
+        &quadrangle, &parallelogram, &rectangle, &rhombus, &square 
+    };
 
-        if (choice == "q" || choice == "Q") {
-            break; 
-        }
+    for (const auto* fig : figures) {
+        print_info(fig);
     }
 
     return EXIT_SUCCESS;
-}
+};

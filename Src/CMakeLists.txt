@@ -6,8 +6,7 @@ add_library(utils INTERFACE)
 target_include_directories(utils INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 # 2. Создаем исполняемый файл калькулятора
-add_executable(Class_Counter   ${CMAKE_CURRENT_SOURCE_DIR}/code/main.cpp 
-                                ${CMAKE_CURRENT_SOURCE_DIR}/code/Counter/Counter.cpp)
+add_executable(Class_hierarchy   ${CMAKE_CURRENT_SOURCE_DIR}/code/main.cpp )
 
 # Линкуем наши шаблоны к приложению
-target_link_libraries(Class_Counter PRIVATE utils)
+target_link_libraries(Class_hierarchy PRIVATE utils)

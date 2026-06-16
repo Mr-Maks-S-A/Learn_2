@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 4.0)
-project(Worc-2_5_Class_Counter VERSION 2.5.2 LANGUAGES CXX)
+project(Worc-2_5_Class_hierarchy VERSION 2.5.3 LANGUAGES CXX)
 
 # --- 1. Глобальные настройки проекта ---
 set(CMAKE_CXX_STANDARD 20)
@@ -12,9 +12,6 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
-# --- Важно: Включаем тесты на самом верхнем уровне ---
-enable_testing()
 
 # --- 2. Подключение поддиректорий ---
 add_subdirectory(Src)
-add_subdirectory(Tests)

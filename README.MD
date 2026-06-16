@@ -33,8 +33,8 @@
  
 
 > **Примечание:** Используется классы ,старые наброски кода.<br>
-[![Ref](https://img.shields.io/badge/ref-v2.2.2-blue?style=flat-square&logo=github)](ref2_2_2) исходник класса <br>
-[![Ref](https://img.shields.io/badge/ref-v2.5.1-blue?style=flat-square&logo=github)](ref2_5_1) исходник get_input <br>
+[![Ref](https://img.shields.io/badge/ref-v2.2.2-blue?style=flat-square&logo=github)](https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_2_2) исходник класса <br>
+[![Ref](https://img.shields.io/badge/ref-v2.5.1-blue?style=flat-square&logo=github)](https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_5_1) исходник get_input <br>
 
 </div>
 

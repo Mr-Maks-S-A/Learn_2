@@ -12,27 +12,23 @@
 
 <div align="left">
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1"><img src="https://img.shields.io/badge/⏮️_Первый-v2.1.1-gray?style=flat" height="22"></a>
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_5_3"><img src="https://img.shields.io/badge/◀️_Назад-v2.5.3-blue?style=flat" height="22"></a> 
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_6_2"><img src="https://img.shields.io/badge/Вперед_▶️-v2.6.2-blue?style=flat" height="22"></a>
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_6_1"><img src="https://img.shields.io/badge/◀️_Назад-v2.6.1-blue?style=flat" height="22"></a> 
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_7_1"><img src="https://img.shields.io/badge/Вперед_▶️-v2.7.1-blue?style=flat" height="22"></a>
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v_latest"><img src="https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat" height="22"></a>
 </div>
 
 ---
 
 <div align="right">
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_6_1/Src/code/main.cpp">
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_6_2/Src/code/main.cpp">
     <img src="https://img.shields.io/badge/Source_Code-blue?style=social&logo=github" height="25">
   </a>
 </div>
 
 <div align="center">
 
-#  Проект: Препроцессорные директивы.
+#  Проект: Макрос SUB
  Просто эксперементы с define и другими препроцессорными директивами <br>
-
- 
-
-
 
 </div>
 
@@ -57,16 +53,24 @@
 ## 🚀 Пример работы программы
 
 ### Preview
-![][preview2_6_1]
+![][preview2_6_2]
 
 ### Вывод в консоль
 
 ```bash
-/m/H/!/0/Learn_2►./build/bin/Preprocessor_directives
-Работаю в боевом режиме
-Введите число 1: 4
-Введите число 2: 6
-Результат сложения: 10
+/m/H/!/0/Learn_2►./build/bin/Macro_SUB
+
+=================SUB
+1
+2
+-2
+SUB с инкрементом: 2 (a теперь = 7)
+
+
+=================SUB_SAFE
+1
+2
+-2
 ```
 
 

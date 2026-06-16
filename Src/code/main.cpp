@@ -2,50 +2,55 @@
  * @file main.cpp
  * @brief Главный файл программы 
  */
-
 #include <iostream>
+#include <type_traits>
+#include <cstdlib> // Для EXIT_SUCCESS
 
-// 1. Объявляем символьную константу MODE.
-// Меняй это значение (0, 1 или любое другое), чтобы протестировать разные режимы.
-#define MODE 1
+// Безопасный макрос SUB через generic-лямбду
+// Убран пробел из [], заменены комментарии на /* */, обернуты аргументы
+#define SUB(x, y) ([] (auto arg1, auto arg2) noexcept { \
+    /* Compile-time защита: проверка типов через decltype */ \
+    static_assert(std::is_arithmetic_v<decltype(arg1)> && std::is_arithmetic_v<decltype(arg2)>, \
+        "Ошибка сборки: Макрос SUB принимает только числовые типы!"); \
+    return arg1 - arg2; \
+}((x), (y))) // Аргументы макроса внутри вызова тоже лучше брать в скобки
 
-// 2. Проверяем, что константа определена. Если нет — ошибка компиляции.
-#ifndef MODE
-#error MODE is not defined! Please define MODE to compile the program.
-#endif
 
-// 3. Условная компиляция функции add (только для боевого режима)
-#if MODE == 1
-int add(int a, int b) {
-    return a + b;
+
+
+
+// Альтернатива макросу — шаблонная constexpr функция с концептами
+template <typename T1, typename T2>
+requires std::is_arithmetic_v<T1> && std::is_arithmetic_v<T2>
+constexpr auto SUB_SAFE(T1 a, T2 b) {
+    return a - b;
 }
-#endif
 
-int main() {
-    // Настройка локализации, чтобы корректно отображался русский язык в консоли
-    setlocale(LC_ALL, "Russian");
+int main(int argc, char** argv)
+{
+    // На Linux для корректного вывода кириллицы в терминале
+    std::setlocale(LC_ALL, "");
 
-    // 4. Проверка значения MODE во время компиляции для логики программы
-#if MODE == 0
-    std::cout << "Работаю в режиме тренировки" << std::endl;
+    int a = 6;
+    int b = 5;
+    int c = 2;
 
-#elif MODE == 1
-    std::cout << "Работаю в боевом режиме" << std::endl;
+    std::cout << "\n\n=================SUB" << std::endl;         
+    std::cout << SUB(a, b) << std::endl;         // Вывод: 1
+    std::cout << SUB(a, b) * c << std::endl;     // Вывод: 2
+    std::cout << SUB(a, b + c) * c << std::endl; // Вывод: -2
+
+    // Защита от Side-эффектов: 'a' увеличится строго ОДИН раз
+    std::cout << "SUB с инкрементом: " << SUB(++a, b) << " (a теперь = " << a << ")" << std::endl;
     
-    int num1 = 0;
-    int num2 = 0;
-    
-    std::cout << "Введите число 1: ";
-    std::cin >> num1;
-    std::cout << "Введите число 2: ";
-    std::cin >> num2;
-    
-    std::cout << "Результат сложения: " << add(num1, num2) << std::endl;
 
-#else
-    std::cout << "Неизвестный режим. Завершение работы" << std::endl;
-
-#endif
+    a = 6;
+    b = 5;
+    c = 2;
+    std::cout << "\n\n=================SUB_SAFE" << std::endl;         
+    std::cout << SUB_SAFE(a, b) << std::endl;         // Вывод: 1
+    std::cout << SUB_SAFE(a, b) * c << std::endl;     // Вывод: 2
+    std::cout << SUB_SAFE(a, b + c) * c << std::endl; // Вывод: -2
 
     return EXIT_SUCCESS;
-};
+}

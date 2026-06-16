@@ -6,7 +6,7 @@ add_library(utils INTERFACE)
 target_include_directories(utils INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 # 2. Создаем исполняемый файл калькулятора
-add_executable(Preprocessor_directives   ${CMAKE_CURRENT_SOURCE_DIR}/code/main.cpp )
+add_executable(Macro_SUB   ${CMAKE_CURRENT_SOURCE_DIR}/code/main.cpp )
 
 # Линкуем наши шаблоны к приложению
-target_link_libraries(Preprocessor_directives PRIVATE utils)
+target_link_libraries(Macro_SUB PRIVATE utils)

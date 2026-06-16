@@ -12,28 +12,26 @@
 
 <div align="left">
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1"><img src="https://img.shields.io/badge/⏮️_Первый-v2.1.1-gray?style=flat" height="22"></a>
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_5_2"><img src="https://img.shields.io/badge/◀️_Назад-v2.5.2-blue?style=flat" height="22"></a> 
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_6_1"><img src="https://img.shields.io/badge/Вперед_▶️-v2.6.1-blue?style=flat" height="22"></a>
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_5_3"><img src="https://img.shields.io/badge/◀️_Назад-v2.5.3-blue?style=flat" height="22"></a> 
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_6_2"><img src="https://img.shields.io/badge/Вперед_▶️-v2.6.2-blue?style=flat" height="22"></a>
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v_latest"><img src="https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat" height="22"></a>
 </div>
 
 ---
 
 <div align="right">
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_5_3/Src/code/main.cpp">
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_6_1/Src/code/main.cpp">
     <img src="https://img.shields.io/badge/Source_Code-blue?style=social&logo=github" height="25">
   </a>
 </div>
 
 <div align="center">
 
-#  Проект: Многофайловые проекты и библиотеки. Иерархия классов
- К иерархии наследования добавлена многофайловая структурная иерархия<br>
+#  Проект: Препроцессорные директивы.
+ Просто эксперементы с define и другими препроцессорными директивами <br>
 
  
 
-> **Примечание:** Используется классы ,старые наброски кода.<br>
-[![Ref](https://img.shields.io/badge/ref-v2.4.1-blue?style=flat-square&logo=github)](https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_4_1) исходник класса <br>
 
 
 </div>
@@ -59,100 +57,16 @@
 ## 🚀 Пример работы программы
 
 ### Preview
-![][preview2_5_3]
+![][preview2_6_1]
 
 ### Вывод в консоль
 
 ```bash
-/m/H/!/0/Learn_2►./build/bin/Class_hierarchy 
-Фигура (Сторон: 0):
-Иерархия типа:
-Figure
-
------------------------------------------
-Треугольник (Сторон: 3):
-Стороны: a=10 b=20 c=30
-Углы: A=50 B=60 C=70
-Иерархия типа:
-Figure
-  |-- Triangle
-
------------------------------------------
-Прямоугольный треугольник (Сторон: 3):
-Стороны: a=10 b=20 c=30
-Углы: A=50 B=60 C=90
-Иерархия типа:
-Figure
-  |-- Triangle
-  |  |-- RightTriangle
-
------------------------------------------
-Равнобедренный треугольник (Сторон: 3):
-Стороны: a=10 b=20 c=10
-Углы: A=50 B=60 C=50
-Иерархия типа:
-Figure
-  |-- Triangle
-  |  |-- IsoscelesTriangle
-
------------------------------------------
-Равносторонний треугольник (Сторон: 3):
-Стороны: a=30 b=30 c=30
-Углы: A=60 B=60 C=60
-Иерархия типа:
-Figure
-  |-- Triangle
-  |  |-- EquilateralTriangle
-
------------------------------------------
-Четырёхугольник (Сторон: 4):
-Стороны: a=10 b=20 c=30 d=40
-Углы: A=50 B=60 C=70 D=80
-Иерархия типа:
-Figure
-  |-- Quadrangle
-
------------------------------------------
-Параллелограмм (Сторон: 4):
-Стороны: a=20 b=30 c=20 d=30
-Углы: A=30 B=40 C=30 D=40
-Иерархия типа:
-Figure
-  |-- Quadrangle
-  |  |-- Parallelogram
-
------------------------------------------
-Прямоугольник (Сторон: 4):
-Стороны: a=10 b=20 c=10 d=20
-Углы: A=90 B=90 C=90 D=90
-Иерархия типа:
-Figure
-  |-- Quadrangle
-  |  |-- Parallelogram
-  |  |  |-- RectangleFigure
-
------------------------------------------
-Ромб (Сторон: 4):
-Стороны: a=30 b=30 c=30 d=30
-Углы: A=30 B=40 C=30 D=40
-Иерархия типа:
-Figure
-  |-- Quadrangle
-  |  |-- Parallelogram
-  |  |  |-- Rhombus
-
------------------------------------------
-Квадрат (Сторон: 4):
-Стороны: a=20 b=20 c=20 d=20
-Углы: A=90 B=90 C=90 D=90
-Иерархия типа:
-Figure
-  |-- Quadrangle
-  |  |-- Parallelogram
-  |  |  |-- RectangleFigure
-  |  |  |  |-- Square
-
------------------------------------------
+/m/H/!/0/Learn_2►./build/bin/Preprocessor_directives
+Работаю в боевом режиме
+Введите число 1: 4
+Введите число 2: 6
+Результат сложения: 10
 ```
 
 
@@ -268,7 +182,7 @@ cmake --build build --parallel
 
 </details>
 
-<details>
+<details open>
 <summary><b>📂 2.6.0 Препроцессор и макросы </b></summary>
 <br>
 
@@ -287,7 +201,7 @@ cmake --build build --parallel
 
 </details>
 
-<details open>
+<details >
 <summary><b>📂 2.5.0 Многофайловые проекты и библиотеки </b></summary>
 <br>
 

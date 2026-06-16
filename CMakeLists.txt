@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 4.0)
-project(Worc-2_5_Class_hierarchy VERSION 2.5.3 LANGUAGES CXX)
+project(Worc-2_6_Preprocessor_directives VERSION 2.6.1 LANGUAGES CXX)
 
 # --- 1. Глобальные настройки проекта ---
 set(CMAKE_CXX_STANDARD 20)

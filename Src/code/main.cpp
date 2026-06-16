@@ -1,51 +1,51 @@
 /**
  * @file main.cpp
- * @brief Главный файл программы для демонстрации полиморфной иерархии геометрических фигур.
- * Выводит информацию о сторонах, углах и внутренней структуре наследования 
- * для треугольников и четырёхугольников.
+ * @brief Главный файл программы 
  */
 
-#include <cstdint>
-#include <iostream> 
-#include <locale> 
-#include <string>
+#include <iostream>
 
-#include <Figure/BranchOfQuadrancles.hpp>
-#include <Figure/BranchOfTriangles.hpp>
+// 1. Объявляем символьную константу MODE.
+// Меняй это значение (0, 1 или любое другое), чтобы протестировать разные режимы.
+#define MODE 1
 
-void print_info(const Figure* fig) {
-    if (!fig) return;
-    std::cout << fig->get_name() << " (Сторон: " << fig->get_sides_count() << "):\n";
-    fig->print_sides();
-    fig->print_angles();
-    std::cout << "Иерархия типа:\n";
-    fig->render_hierarchy();
-    std::cout << "\n-----------------------------------------\n";
+// 2. Проверяем, что константа определена. Если нет — ошибка компиляции.
+#ifndef MODE
+#error MODE is not defined! Please define MODE to compile the program.
+#endif
+
+// 3. Условная компиляция функции add (только для боевого режима)
+#if MODE == 1
+int add(int a, int b) {
+    return a + b;
 }
+#endif
 
 int main() {
-    std::setlocale(LC_ALL, "Russian");
+    // Настройка локализации, чтобы корректно отображался русский язык в консоли
+    setlocale(LC_ALL, "Russian");
 
-    Figure generic_figure;
-    Triangle triangle(10, 20, 30, 50, 60, 70);
-    RightTriangle r_triangle(10, 20, 30, 50, 60);
-    IsoscelesTriangle i_triangle(10, 20, 50, 60);
-    EquilateralTriangle e_triangle(30);
+    // 4. Проверка значения MODE во время компиляции для логики программы
+#if MODE == 0
+    std::cout << "Работаю в режиме тренировки" << std::endl;
 
-    Quadrangle quadrangle(10, 20, 30, 40, 50, 60, 70, 80);
-    Parallelogram parallelogram(20, 30, 30, 40);
-    RectangleFigure rectangle(10, 20);
-    Rhombus rhombus(30, 30, 40);
-    Square square(20);
+#elif MODE == 1
+    std::cout << "Работаю в боевом режиме" << std::endl;
+    
+    int num1 = 0;
+    int num2 = 0;
+    
+    std::cout << "Введите число 1: ";
+    std::cin >> num1;
+    std::cout << "Введите число 2: ";
+    std::cin >> num2;
+    
+    std::cout << "Результат сложения: " << add(num1, num2) << std::endl;
 
-    const Figure* figures[] = { 
-        &generic_figure, &triangle, &r_triangle, &i_triangle, &e_triangle, 
-        &quadrangle, &parallelogram, &rectangle, &rhombus, &square 
-    };
+#else
+    std::cout << "Неизвестный режим. Завершение работы" << std::endl;
 
-    for (const auto* fig : figures) {
-        print_info(fig);
-    }
+#endif
 
     return EXIT_SUCCESS;
 };

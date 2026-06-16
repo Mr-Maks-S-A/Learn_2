@@ -34,7 +34,7 @@
 
 > **Примечание:** Используется классы ,старые наброски кода.<br>
 [![Ref](https://img.shields.io/badge/ref-v2.1.3-blue?style=flat-square&logo=github)](ref2_1_3) исходник функции **get_input**<br>
-[![Ref](https://img.shields.io/badge/ref-v2.1.3-blue?style=flat-square&logo=github)](ref2_2_1) дополнительный исходник функции **get_input**<br>
+[![Ref](https://img.shields.io/badge/ref-v2.2.1-blue?style=flat-square&logo=github)](ref2_2_1) дополнительный исходник функции **get_input**<br>
 </div>
 
 

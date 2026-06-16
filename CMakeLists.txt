@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 4.0)
-project(Worc-2_5_Math_Funk VERSION 2.5.1 LANGUAGES CXX)
+project(Worc-2_5_Class_Counter VERSION 2.5.2 LANGUAGES CXX)
 
 # --- 1. Глобальные настройки проекта ---
 set(CMAKE_CXX_STANDARD 20)

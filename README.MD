@@ -12,27 +12,29 @@
 
 <div align="left">
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1"><img src="https://img.shields.io/badge/⏮️_Первый-v2.1.1-gray?style=flat" height="22"></a>
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_4_2"><img src="https://img.shields.io/badge/◀️_Назад-v2.4.2-blue?style=flat" height="22"></a> 
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_5_1"><img src="https://img.shields.io/badge/Вперед_▶️-v2.5.1-blue?style=flat" height="22"></a>
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_4_3"><img src="https://img.shields.io/badge/◀️_Назад-v2.4.3-blue?style=flat" height="22"></a> 
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_5_2"><img src="https://img.shields.io/badge/Вперед_▶️-v2.5.2-blue?style=flat" height="22"></a>
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v_latest"><img src="https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat" height="22"></a>
 </div>
 
 ---
 
 <div align="right">
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_4_3/main.cpp">
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_5_1/Src/code/main.cpp">
     <img src="https://img.shields.io/badge/Source_Code-blue?style=social&logo=github" height="25">
   </a>
 </div>
 
 <div align="center">
 
-#  Проект: Фигуры. Методы
-Просто практика OOP.<br>
+#  Проект: Многофайловые проекты и библиотеки. Математические функции.
+Реализован калькулятор а основе стека и шаблонный набросок методов для ввода данных<br>
+дополнительно реализованы тесты<br>
  
 
-> **Примечание:** Используется классы ,старые наброски кода.<br>Дополнительно реализован рендеринг иерархии простой.<br>
-
+> **Примечание:** Используется классы ,старые наброски кода.<br>
+[![Ref](https://img.shields.io/badge/ref-v2.1.3-blue?style=flat-square&logo=github)](ref2_1_3) исходник функции **get_input**<br>
+[![Ref](https://img.shields.io/badge/ref-v2.1.3-blue?style=flat-square&logo=github)](ref2_2_1) дополнительный исходник функции **get_input**<br>
 </div>
 
 
@@ -56,120 +58,51 @@
 ## 🚀 Пример работы программы
 
 ### Preview
-![][preview2_4_3]
+![][preview2_5_1]
 
 ### Вывод в консоль
 
 ```bash
-/m/H/!/0/Learn_2►./build/bin/Worc-2_4_Figures_Methods
-Фигура:
-Правильная
-Количество сторон: 0
-Иерархия типа :
-Figure
+/m/H/!/0/Learn_2►./build/bin/calculator_app  
+=== Программа: Строковый рекурсивный калькулятор ===
+Введите выражение [или для выхода введите 'q' или 'Q']: (1+1+1)*2
+Результат: 6
+
 -----------------------------------------
-Треугольник:
-Правильная
-Количество сторон: 3
-Стороны: a=10 b=20 c=30
-Углы: A=50 B=60 C=70
-Иерархия типа :
-Figure
-  |-- Triangle
+
+Введите выражение [или для выхода введите 'q' или 'Q']: 1^2
+Результат: 1
+
 -----------------------------------------
-Прямоугольный треугольник:
-Неправильная
-Количество сторон: 3
-Стороны: a=10 b=20 c=30
-Углы: A=50 B=60 C=90
-Иерархия типа :
-Figure
-  |-- Triangle
-  |  |-- RightTriangle
+
+Введите выражение [или для выхода введите 'q' или 'Q']: 2^2
+Результат: 4
+
 -----------------------------------------
-Прямоугольный треугольник:
-Правильная
-Количество сторон: 3
-Стороны: a=10 b=20 c=30
-Углы: A=50 B=40 C=90
-Иерархия типа :
-Figure
-  |-- Triangle
-  |  |-- RightTriangle
+
+Введите выражение [или для выхода введите 'q' или 'Q']: 3^3
+Результат: 27
+
 -----------------------------------------
-Равнобедренный треугольник:
-Неправильная
-Количество сторон: 3
-Стороны: a=10 b=20 c=10
-Углы: A=50 B=60 C=50
-Иерархия типа :
-Figure
-  |-- Triangle
-  |  |-- IsoscelesTriangle
+
+Введите выражение [или для выхода введите 'q' или 'Q']: 27^0.5
+Результат: 5.19615
+
 -----------------------------------------
-Равносторонний треугольник:
-Правильная
-Количество сторон: 3
-Стороны: a=30 b=30 c=30
-Углы: A=60 B=60 C=60
-Иерархия типа :
-Figure
-  |-- Triangle
-  |  |-- EquilateralTriangle
+
+Введите выражение [или для выхода введите 'q' или 'Q']: 27/2
+Результат: 13.5
+
 -----------------------------------------
-Четырёхугольник:
-Неправильная
-Количество сторон: 4
-Стороны: a=10 b=20 c=30 d=40
-Углы: A=50 B=60 C=70 D=80
-Иерархия типа :
-Figure
-  |-- Quadrangle
+
+Введите выражение [или для выхода введите 'q' или 'Q']: 27*0.5
+Результат: 13.5
+
 -----------------------------------------
-Прямоугольник:
-Правильная
-Количество сторон: 4
-Стороны: a=10 b=20 c=10 d=20
-Углы: A=90 B=90 C=90 D=90
-Иерархия типа :
-Figure
-  |-- Quadrangle
-  |  |-- Parallelogram
-  |  |  |-- RectangleFigure
------------------------------------------
-Квадрат:
-Правильная
-Количество сторон: 4
-Стороны: a=20 b=20 c=20 d=20
-Углы: A=90 B=90 C=90 D=90
-Иерархия типа :
-Figure
-  |-- Quadrangle
-  |  |-- Parallelogram
-  |  |  |-- RectangleFigure
-  |  |  |  |-- Square
------------------------------------------
-Параллелограмм:
-Неправильная
-Количество сторон: 4
-Стороны: a=20 b=30 c=20 d=30
-Углы: A=30 B=40 C=30 D=40
-Иерархия типа :
-Figure
-  |-- Quadrangle
-  |  |-- Parallelogram
------------------------------------------
-Ромб:
-Неправильная
-Количество сторон: 4
-Стороны: a=30 b=30 c=30 d=30
-Углы: A=30 B=40 C=30 D=40
-Иерархия типа :
-Figure
-  |-- Quadrangle
-  |  |-- Parallelogram
-  |  |  |-- Rhombus
------------------------------------------
+
+Введите выражение [или для выхода введите 'q' или 'Q']: q
+
+Завершение работы программы. До свидания!
 ```
 
 
@@ -185,6 +118,12 @@ cmake --build build --parallel
 
 ```bash
 ./build/bin/{projectname}  
+```
+
+для тестирования с выводом
+
+```bash
+ctest --verbose 
 ```
 
 # 📊 Прогресс обучения
@@ -304,7 +243,7 @@ cmake --build build --parallel
 
 </details>
 
-<details>
+<details open>
 <summary><b>📂 2.5.0 Многофайловые проекты и библиотеки </b></summary>
 <br>
 
@@ -328,7 +267,7 @@ cmake --build build --parallel
 
 </details>
 
-<details open>
+<details >
 <summary><b>📂 2.4.0 ООП: наследование и полиморфизм. </b></summary>
 <br>
 

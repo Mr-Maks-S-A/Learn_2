@@ -1,0 +1,26 @@
+#include <Calc/SimpleMath.hpp>
+#include <stdexcept>
+#include <cmath>
+
+double add(double a, double b) {
+    return a + b;
+}
+
+double subtract(double a, double b) {
+    return a - b;
+}
+
+double multiply(double a, double b) {
+    return a * b;
+}
+
+double divide(double a, double b) {
+    if (b == 0.0) {
+        throw std::runtime_error("Деление на ноль!");
+    }
+    return a / b;
+}
+
+double power(double base, double exp) {
+    return std::pow(base, exp);
+}

@@ -1,54 +1,76 @@
-/**
- * @file main.cpp
- * @brief Главный файл программы 
- */
-#include <iostream>
+#include <cstdint>
+#include <iostream> 
+#include <locale> 
 #include <string>
-#include <exception>
+#include <vector>
+#include <memory>
+#include <functional>
 
-// собственное исключение, наследуясь от std::exception
-class bad_length : public std::exception {
-public:
-    const char* what() const noexcept override {
-        return "Вы ввели слово запретной длины! До свидания";
-    }
-};
+#include <Figure/BranchOfQuadrancles.hpp>
+#include <Figure/BranchOfTriangles.hpp>
 
-// Функция проверки длины строки
-int function(std::string str, int forbidden_length) {
-    // В C++ str.length() возвращает количество байт. 
-    // Для кириллицы в UTF-8 один символ занимает больше 1 байта, 
-    int current_length = str.length(); 
-    
-    if (current_length == forbidden_length) {
-        throw bad_length(); // Выбрасываем исключение
-    }
-    
-    return current_length;
+void print_info(const Figure* fig) {
+    if (!fig) return;
+    std::cout << fig->get_name() << " (Сторон: " << fig->get_sides_count() << "):\n";
+    fig->print_sides();
+    fig->print_angles();
+    std::cout << "Иерархия типа:\n";
+    fig->render_hierarchy();
+    std::cout << "\n-----------------------------------------\n";
 }
 
 int main() {
     std::setlocale(LC_ALL, "Russian");
-    
-    int forbidden_length = 0;
-    std::cout << "Введите запретную длину: ";
-    std::cin >> forbidden_length;
-    
-    std::string user_word;
-    
-    while (true) {
-        std::cout << "Введите слово: ";
-        std::cin >> user_word;
-        
+
+    std::vector<const Figure*> figures;
+
+    // «Затычка»: теперь мы передаем функцию-фабрику `std::function<Figure*()>`
+    // Объект `new` будет создаваться НАПРЯМУЮ внутри блока try-catch!
+    auto try_create = [&](std::function<Figure*()> factory) {
         try {
-            int length = function(user_word, forbidden_length);
-            std::cout << "Длина слова \"" << user_word << "\" равна " << length << std::endl;
+            // Создание происходит ЗДЕСЬ, поэтому любой throw будет пойман
+            Figure* fig_ptr = factory(); 
+            figures.push_back(fig_ptr);
         }
-        catch (const bad_length& e) {
-            std::cout << e.what() << std::endl;
-            break; 
+        catch (const figure_error& ex) {
+            std::cout << "⚠️ Не удалось создать фигуру! Лог перехвачен в main:\n" << ex.what() << "\n";
+            std::cout << "-----------------------------------------\n";
         }
+        catch (const std::exception& ex) {
+            std::cout << "Неизвестная ошибка: " << ex.what() << "\n";
+            std::cout << "-----------------------------------------\n";
+        }
+    };
+
+    std::cout << "=== Инициализация и проверка фигур ===\n\n";
+
+    // Передаем создание через лямбда-выражения `[] { return new ...; }`
+    try_create([] { return new Figure(); });
+
+    // --- ТРЕУГОЛЬНИКИ ---
+    try_create([] { return new Triangle(10, 20, 30, 50, 60, 70); });
+    try_create([] { return new RightTriangle(10, 20, 30, 50, 60); }); // Свалится, но main поймает!
+    try_create([] { return new IsoscelesTriangle(10, 20, 50, 60); }); // Свалится, но main поймает!
+    try_create([] { return new EquilateralTriangle(30); });
+
+    // --- ЧЕТЫРЕХУГОЛЬНИКИ ---
+    try_create([] { return new Quadrangle(10, 20, 30, 40, 50, 60, 70, 80); }); // Свалится, но main поймает!
+    try_create([] { return new Parallelogram(20, 30, 30, 40); });             // Свалится, но main поймает!
+    try_create([] { return new RectangleFigure(10, 20); });
+    try_create([] { return new Rhombus(30, 30, 40); });                       // Свалится, но main поймает!
+    try_create([] { return new Square(20); });
+
+
+    std::cout << "\n=== Вывод информации об успешных фигурах ===\n\n";
+
+    for (const auto* fig : figures) {
+        print_info(fig);
     }
-    
+
+    // Чистим память только за успешными фигурами
+    for (const auto* fig : figures) {
+        delete fig;
+    }
+
     return EXIT_SUCCESS;
-};
+}

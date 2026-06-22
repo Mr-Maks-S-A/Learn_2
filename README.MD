@@ -12,23 +12,26 @@
 
 <div align="left">
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1"><img src="https://img.shields.io/badge/⏮️_Первый-v2.1.1-gray?style=flat" height="22"></a>
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_6_2"><img src="https://img.shields.io/badge/◀️_Назад-v2.6.2-blue?style=flat" height="22"></a> 
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_7_2"><img src="https://img.shields.io/badge/Вперед_▶️-v2.7.2-blue?style=flat" height="22"></a>
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_7_1"><img src="https://img.shields.io/badge/◀️_Назад-v2.7.1-blue?style=flat" height="22"></a> 
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_8_1"><img src="https://img.shields.io/badge/Вперед_▶️-v2.8.1-blue?style=flat" height="22"></a>
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v_latest"><img src="https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat" height="22"></a>
 </div>
 
 ---
 
 <div align="right">
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_7_1/Src/code/main.cpp">
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_7_2/Src/code/main.cpp">
     <img src="https://img.shields.io/badge/Source_Code-blue?style=social&logo=github" height="25">
   </a>
 </div>
 
 <div align="center">
 
-#  Проект: Простое исключение
- Создание простого кастомного исключения <br>
+#  Проект: Исключение конструктора класса
+ Создание обработкаи исключения в конструкторе класса <br>
+
+> **Примечание:** Добавлен параметр сборки для попытки выстоять заменив некоректные данные корректыми <br>
+[![Ref](https://img.shields.io/badge/ref-v2.5.3-blue?style=flat-square&logo=github)](https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_5_3) исходник класса <br>
 
 </div>
 
@@ -53,38 +56,164 @@
 ## 🚀 Пример работы программы
 
 ### Preview
-![][preview2_7_1]
+![][preview2_7_2]
 
 ### Вывод в консоль
 
+-DSHUTDOWN_ON_ERROR=on
 ```bash
-/m/H/!/0/Learn_2►./build/bin/Simple_exception
-Введите запретную длину: 5
-Введите слово: Привет
-Длина слова "Привет" равна 12
-Введите слово: Hello
-Вы ввели слово запретной длины! До свидания
+/m/H/!/0/Learn_2►./build/bin/Class_constructor_exception
+=== Инициализация и проверка фигур ===
+
+[КРИТИКА] Срочная остановка программы!
+Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfTriangles.hpp (строка 10)
+Функция: Triangle::Triangle(int, int, int, int, int, int, const std::string&)
+Ошибка: сумма углов не равна 180
+
+terminate called after throwing an instance of 'figure_error'
+  what():  Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfTriangles.hpp (строка 10)
+Функция: Triangle::Triangle(int, int, int, int, int, int, const std::string&)
+Ошибка: сумма углов не равна 180
+fish: Job 1, './build/bin/Class_constructor_e…' terminated by signal SIGABRT (Abort)
 ```
 
+-DSHUTDOWN_ON_ERROR=off
 ```bash
-/m/H/!/0/Learn_2►./build/bin/Simple_exception
-Введите запретную длину: 3
-Введите слово: G
-Длина слова "G" равна 1
-Введите слово: П
-Длина слова "П" равна 2
-Введите слово: пр
-Длина слова "пр" равна 4
-Введите слово: ПG
-Вы ввели слово запретной длины! До свидания
-/m/H/!/0/Learn_2► 
+/m/H/!/0/L/m/H/!/0/L/m/H/!/0/Learn_2►./build/bin/Class_constructor_exception
+=== Инициализация и проверка фигур ===
+
+[ЛОГ КОНСТРУКТОРА] Попытка выстоять. Исключение улетает выше:
+Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfTriangles.hpp (строка 10)
+Функция: Triangle::Triangle(int, int, int, int, int, int, const std::string&)
+Ошибка: сумма углов не равна 180
+
+[ЛОГ КОНСТРУКТОРА] Попытка выстоять. Исключение улетает выше:
+Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfTriangles.hpp (строка 10)
+Функция: Triangle::Triangle(int, int, int, int, int, int, const std::string&)
+Ошибка: сумма углов не равна 180
+
+⚠️ Не удалось создать фигуру! Лог перехвачен в main:
+Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfTriangles.hpp (строка 10)
+Функция: Triangle::Triangle(int, int, int, int, int, int, const std::string&)
+Ошибка: сумма углов не равна 180
+-----------------------------------------
+[ЛОГ КОНСТРУКТОРА] Попытка выстоять. Исключение улетает выше:
+Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfTriangles.hpp (строка 10)
+Функция: Triangle::Triangle(int, int, int, int, int, int, const std::string&)
+Ошибка: сумма углов не равна 180
+
+[ЛОГ КОНСТРУКТОРА] Попытка выстоять. Исключение улетает выше:
+Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfTriangles.hpp (строка 10)
+Функция: Triangle::Triangle(int, int, int, int, int, int, const std::string&)
+Ошибка: сумма углов не равна 180
+
+⚠️ Не удалось создать фигуру! Лог перехвачен в main:
+Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfTriangles.hpp (строка 10)
+Функция: Triangle::Triangle(int, int, int, int, int, int, const std::string&)
+Ошибка: сумма углов не равна 180
+-----------------------------------------
+[ЛОГ КОНСТРУКТОРА] Попытка выстоять. Исключение улетает выше:
+Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfQuadrancles.hpp (строка 10)
+Функция: Quadrangle::Quadrangle(int, int, int, int, int, int, int, int, const std::string&)
+Ошибка: сумма углов не равна 360
+
+⚠️ Не удалось создать фигуру! Лог перехвачен в main:
+Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfQuadrancles.hpp (строка 10)
+Функция: Quadrangle::Quadrangle(int, int, int, int, int, int, int, int, const std::string&)
+Ошибка: сумма углов не равна 360
+-----------------------------------------
+[ЛОГ КОНСТРУКТОРА] Попытка выстоять. Исключение улетает выше:
+Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfQuadrancles.hpp (строка 10)
+Функция: Quadrangle::Quadrangle(int, int, int, int, int, int, int, int, const std::string&)
+Ошибка: сумма углов не равна 360
+
+[ЛОГ КОНСТРУКТОРА] Попытка выстоять. Исключение улетает выше:
+Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfQuadrancles.hpp (строка 10)
+Функция: Quadrangle::Quadrangle(int, int, int, int, int, int, int, int, const std::string&)
+Ошибка: сумма углов не равна 360
+
+⚠️ Не удалось создать фигуру! Лог перехвачен в main:
+Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfQuadrancles.hpp (строка 10)
+Функция: Quadrangle::Quadrangle(int, int, int, int, int, int, int, int, const std::string&)
+Ошибка: сумма углов не равна 360
+-----------------------------------------
+[ЛОГ КОНСТРУКТОРА] Попытка выстоять. Исключение улетает выше:
+Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfQuadrancles.hpp (строка 10)
+Функция: Quadrangle::Quadrangle(int, int, int, int, int, int, int, int, const std::string&)
+Ошибка: сумма углов не равна 360
+
+[ЛОГ КОНСТРУКТОРА] Попытка выстоять. Исключение улетает выше:
+Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfQuadrancles.hpp (строка 10)
+Функция: Quadrangle::Quadrangle(int, int, int, int, int, int, int, int, const std::string&)
+Ошибка: сумма углов не равна 360
+
+[ЛОГ КОНСТРУКТОРА] Попытка выстоять. Исключение улетает выше:
+Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfQuadrancles.hpp (строка 10)
+Функция: Quadrangle::Quadrangle(int, int, int, int, int, int, int, int, const std::string&)
+Ошибка: сумма углов не равна 360
+
+⚠️ Не удалось создать фигуру! Лог перехвачен в main:
+Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfQuadrancles.hpp (строка 10)
+Функция: Quadrangle::Quadrangle(int, int, int, int, int, int, int, int, const std::string&)
+Ошибка: сумма углов не равна 360
+-----------------------------------------
+
+=== Вывод информации об успешных фигурах ===
+
+Фигура (Сторон: 0):
+Иерархия типа:
+Figure
+
+-----------------------------------------
+Треугольник (Сторон: 3):
+Стороны: a=10 b=20 c=30
+Углы: A=50 B=60 C=70
+Иерархия типа:
+Figure
+  |-- Triangle
+
+-----------------------------------------
+Равносторонний треугольник (Сторон: 3):
+Стороны: a=30 b=30 c=30
+Углы: A=60 B=60 C=60
+Иерархия типа:
+Figure
+  |-- Triangle
+  |  |-- EquilateralTriangle
+
+-----------------------------------------
+Прямоугольник (Сторон: 4):
+Стороны: a=10 b=20 c=10 d=20
+Углы: A=90 B=90 C=90 D=90
+Иерархия типа:
+Figure
+  |-- Quadrangle
+  |  |-- Parallelogram
+  |  |  |-- RectangleFigure
+
+-----------------------------------------
+Квадрат (Сторон: 4):
+Стороны: a=20 b=20 c=20 d=20
+Углы: A=90 B=90 C=90 D=90
+Иерархия типа:
+Figure
+  |-- Quadrangle
+  |  |-- Parallelogram
+  |  |  |-- RectangleFigure
+  |  |  |  |-- Square
+
+-----------------------------------------
 ```
 
 
 #  Команды для сборки
 
 ```bash
-cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug 
+cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug -DSHUTDOWN_ON_ERROR=on 
+```
+
+```bash
+cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug -DSHUTDOWN_ON_ERROR=off 
 ```
 
 ```bash

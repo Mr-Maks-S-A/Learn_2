@@ -12,23 +12,23 @@
 
 <div align="left">
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1"><img src="https://img.shields.io/badge/⏮️_Первый-v2.1.1-gray?style=flat" height="22"></a>
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_6_1"><img src="https://img.shields.io/badge/◀️_Назад-v2.6.1-blue?style=flat" height="22"></a> 
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_7_1"><img src="https://img.shields.io/badge/Вперед_▶️-v2.7.1-blue?style=flat" height="22"></a>
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_6_2"><img src="https://img.shields.io/badge/◀️_Назад-v2.6.2-blue?style=flat" height="22"></a> 
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_7_2"><img src="https://img.shields.io/badge/Вперед_▶️-v2.7.2-blue?style=flat" height="22"></a>
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v_latest"><img src="https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat" height="22"></a>
 </div>
 
 ---
 
 <div align="right">
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_6_2/Src/code/main.cpp">
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_7_1/Src/code/main.cpp">
     <img src="https://img.shields.io/badge/Source_Code-blue?style=social&logo=github" height="25">
   </a>
 </div>
 
 <div align="center">
 
-#  Проект: Макрос SUB
- Просто эксперементы с define и другими препроцессорными директивами <br>
+#  Проект: Простое исключение
+ Создание простого кастомного исключения <br>
 
 </div>
 
@@ -53,24 +53,31 @@
 ## 🚀 Пример работы программы
 
 ### Preview
-![][preview2_6_2]
+![][preview2_7_1]
 
 ### Вывод в консоль
 
 ```bash
-/m/H/!/0/Learn_2►./build/bin/Macro_SUB
+/m/H/!/0/Learn_2►./build/bin/Simple_exception
+Введите запретную длину: 5
+Введите слово: Привет
+Длина слова "Привет" равна 12
+Введите слово: Hello
+Вы ввели слово запретной длины! До свидания
+```
 
-=================SUB
-1
-2
--2
-SUB с инкрементом: 2 (a теперь = 7)
-
-
-=================SUB_SAFE
-1
-2
--2
+```bash
+/m/H/!/0/Learn_2►./build/bin/Simple_exception
+Введите запретную длину: 3
+Введите слово: G
+Длина слова "G" равна 1
+Введите слово: П
+Длина слова "П" равна 2
+Введите слово: пр
+Длина слова "пр" равна 4
+Введите слово: ПG
+Вы ввели слово запретной длины! До свидания
+/m/H/!/0/Learn_2► 
 ```
 
 
@@ -167,7 +174,7 @@ cmake --build build --parallel
 
 </details>
 
-<details>
+<details open>
 <summary><b>📂 2.7.0 Исключения и обработка ошибок </b></summary>
 <br>
 
@@ -186,7 +193,7 @@ cmake --build build --parallel
 
 </details>
 
-<details open>
+<details >
 <summary><b>📂 2.6.0 Препроцессор и макросы </b></summary>
 <br>
 

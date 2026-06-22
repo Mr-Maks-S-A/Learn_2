@@ -1,12 +1,12 @@
 # 1. Создаем Header-Only (интерфейсную) библиотеку для наших шаблонов
-add_library(utils INTERFACE)
+#add_library(utils INTERFACE)
 
 # Указываем, где искать заголовки. 
 # INTERFACE означает, что любой, кто подключит эту библиотеку, автоматически получит этот путь.
-target_include_directories(utils INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+#target_include_directories(utils INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 # 2. Создаем исполняемый файл калькулятора
-add_executable(Macro_SUB   ${CMAKE_CURRENT_SOURCE_DIR}/code/main.cpp )
+add_executable(Simple_exception    ${CMAKE_CURRENT_SOURCE_DIR}/code/main.cpp )
 
 # Линкуем наши шаблоны к приложению
-target_link_libraries(Macro_SUB PRIVATE utils)
+#target_link_libraries(Simple_exception  PRIVATE utils)

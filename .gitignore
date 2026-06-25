@@ -45,6 +45,7 @@ Build/
 build-*/
 out/
 Out/
+Testing/
 
 # CMake generated files
 CMakeFiles/

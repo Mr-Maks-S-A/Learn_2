@@ -12,29 +12,27 @@
 
 <div align="left">
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1"><img src="https://img.shields.io/badge/⏮️_Первый-v2.1.1-gray?style=flat" height="22"></a>
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_7_2"><img src="https://img.shields.io/badge/◀️_Назад-v2.7.2-blue?style=flat" height="22"></a> 
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_9_1"><img src="https://img.shields.io/badge/Вперед_▶️-v2.9.1-blue?style=flat" height="22"></a>
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_8_2"><img src="https://img.shields.io/badge/◀️_Назад-v2.8.2-blue?style=flat" height="22"></a> 
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_9_2"><img src="https://img.shields.io/badge/Вперед_▶️-v2.9.2-blue?style=flat" height="22"></a>
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v_latest"><img src="https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat" height="22"></a>
 </div>
 
 ---
 
 <div align="right">
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_8_1/Src/FractionLib/code/Fraction.cpp">
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_9_1/Src/code/main.cpp">
     <img src="https://img.shields.io/badge/Source_Code-blue?style=social&logo=github" height="25">
   </a>
 </div>
 
 <div align="center">
 
-#  Проект: Перегрузка операторов
- Создание библиотеки для работы с дробями и тестирование ивоного<br>
-Здесь обединились 2_8_1 Сравнения в дробях. и 2_8_2 Остальные операции с дробями.
+#  Проект: Cmake Простейший проект.
+ Создание простого проекта и эксперемент по выносу системы сборки в отдельную директорию от основного кода<br>
+
 
 </div>
 
-> **Примечание:** ссылки на мой старый похожий код которым вдохнавлялся <br>
-[![Ref](https://img.shields.io/badge/ref-v2.5.1-blue?style=flat-square&logo=github)](https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_5_1) тестирование <br>
 
 
 
@@ -57,136 +55,47 @@
 ## 🚀 Пример работы программы
 
 ### Preview
-![][preview2_8_1]
-![][preview2_8_2]
+![][preview2_9_1]
 
 ### Вывод в консоль
 
 ```bash
-/m/H/!/0/Learn_2►cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug 
+/m/H/!/0/Learn_2►ls 
+drwxr-xr-x    - maksimus 26 июн 01:15  .git
+drwxr-xr-x    - maksimus 26 июн 01:04  Build_System
+drwxr-xr-x    - maksimus 25 июн 21:56  ReadmeSource
+drwxr-xr-x    - maksimus 26 июн 00:59  Src
+.rwxr-xr-x  658 maksimus 26 июн 01:01 󰊢 .gitignore
+.rwxr-xr-x 1,1k maksimus 30 мая 22:23  LICENSE
+.rwxr-xr-x  52k maksimus 26 июн 01:12  README.MD
+/m/H/!/0/Learn_2►cmake -S Build_System -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug 
 -- The CXX compiler identification is GNU 16.1.1
 -- Detecting CXX compiler ABI info
 -- Detecting CXX compiler ABI info - done
 -- Check for working CXX compiler: /usr/bin/c++ - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- Configuring done (0.5s)
+-- Configuring done (0.6s)
 -- Generating done (0.0s)
 -- Build files have been written to: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/build
-/m/H/!/0/Learn_2►cmake --build build --parallel
-[6/6] Linking CXX executable bin/FractionTests_2
-/m/H/!/0/Learn_2►cd build
-/m/H/!/0/L/build►ctest
-Test project /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/build
-    Start 1: Run_Basic_Tests
-1/2 Test #1: Run_Basic_Tests ..................   Passed    0.00 sec
-    Start 2: Run_Stress_Tests
-2/2 Test #2: Run_Stress_Tests .................   Passed    0.58 sec
-
-100% tests passed, 0 tests failed out of 2
-
-Total Test time (real) =   0.59 sec
-/m/H/!/0/L/build►  
+/m/H/!/0/Learn_2►cmake --build build --parallel   
+[2/2] Linking CXX executable bin/Worc-2_9_Cmake_simple_Project
+/m/H/!/0/Learn_2►./build/bin/Worc-2_9_Cmake_simple_Project  
+Введите имя: Иванов Иван Иваныч
+Здравствуйте, Иванов Иван Иваныч!
+/m/H/!/0/Learn_2► 
 ```
 
-```bash
-/m/H/!/0/L/build►ctest -R Run_Basic_Tests --verbose
-UpdateCTestConfiguration  from :/mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/build/DartConfiguration.tcl
-Test project /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/build
-Constructing a list of tests
-Done constructing a list of tests
-Updating test list for fixtures
-Added 0 tests to meet fixture requirements
-Checking test dependency graph...
-Checking test dependency graph end
-test 1
-    Start 1: Run_Basic_Tests
-
-1: Test command: /mnt/HDD_DataStore/!\ 01\ Programming_Project_Save/01\ C++/Learn_2/build/bin/FractionTests_1
-1: Working Directory: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/build/Src/Tests
-1: Test timeout computed to be: 10000000
-1: === Running Manual Verification Scenario ===
-1: f1 not == f2
-1: f1 != f2
-1: f1 not < f2
-1: f1 > f2
-1: f1 not <= f2
-1: f1 >= f2
-1:
-1: === Running Automated Assert Tests ===
-1: All tests passed successfully!
-1/1 Test #1: Run_Basic_Tests ..................   Passed    0.00 sec
-
-The following tests passed:
-	Run_Basic_Tests
-
-100% tests passed, 0 tests failed out of 1
-
-Total Test time (real) =   0.00 sec
-```
-
-```bash
-/m/H/!/0/L/build►ctest -R Run_Stress_Tests --verbose
-UpdateCTestConfiguration  from :/mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/build/DartConfiguration.tcl
-Test project /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/build
-Constructing a list of tests
-Done constructing a list of tests
-Updating test list for fixtures
-Added 0 tests to meet fixture requirements
-Checking test dependency graph...
-Checking test dependency graph end
-test 2
-    Start 2: Run_Stress_Tests
-
-2: Test command: /mnt/HDD_DataStore/!\ 01\ Programming_Project_Save/01\ C++/Learn_2/build/bin/FractionTests_2
-2: Working Directory: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/build/Src/Tests
-2: Test timeout computed to be: 10000000
-2: === STARTING MAX STRESS TEST (100,000 iterations) ===
-2: -> Progress:  10000 / 100000 iterations checked...
-2: -> Progress:  20000 / 100000 iterations checked...
-2: -> Progress:  30000 / 100000 iterations checked...
-2: -> Progress:  40000 / 100000 iterations checked...
-2: -> Progress:  50000 / 100000 iterations checked...
-2: -> Progress:  60000 / 100000 iterations checked...
-2: -> Progress:  70000 / 100000 iterations checked...
-2: -> Progress:  80000 / 100000 iterations checked...
-2: -> Progress:  90000 / 100000 iterations checked...
-2: -> Progress: 100000 / 100000 iterations checked...
-2: 🚀 STRESS TEST PASSED COMPLETELY! 100,000 states verified without any crashes!
-1/1 Test #2: Run_Stress_Tests .................   Passed    0.58 sec
-
-The following tests passed:
-	Run_Stress_Tests
-
-100% tests passed, 0 tests failed out of 1
-
-Total Test time (real) =   0.58 sec
-```
 
 #  Команды для сборки
 
 ```bash
-cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug 
+cmake -S Build_System -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug 
 ```
 
 ```bash
 cmake --build build --parallel
 ```
-
-```bash
-cd build 
-ctest --verbose 
-```
-
-или
-
-```bash
-cd build 
-ctest -R Run_Basic_Tests --verbose
-ctest -R Run_Stress_Tests --verbose 
-```
-
-или
 
 ```bash
 ./build/bin/{projectname}  
@@ -232,7 +141,7 @@ ctest -R Run_Stress_Tests --verbose
 
 </details>
 
-<details>
+<details open>
 <summary><b>📂 2.9.0 CMake </b></summary>
 <br>
 

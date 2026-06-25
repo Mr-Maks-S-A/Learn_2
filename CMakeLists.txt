@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 4.0)
-project(Worc-2_7_Class_constructor_exception VERSION 2.7.2 LANGUAGES CXX)
+cmake_minimum_required(VERSION 3.15)
+project(Worc-2_8_LIb_Fraction VERSION 2.8.1 LANGUAGES CXX)
 
 # --- 1. Глобальные настройки проекта ---
 set(CMAKE_CXX_STANDARD 20)
@@ -14,4 +14,7 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
 
 # --- 2. Подключение поддиректорий ---
-add_subdirectory(Src)
+add_subdirectory(Src/FractionLib)
+
+enable_testing()
+add_subdirectory(Src/Tests)

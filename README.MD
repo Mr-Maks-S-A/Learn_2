@@ -12,28 +12,28 @@
 
 <div align="left">
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1"><img src="https://img.shields.io/badge/⏮️_Первый-v2.1.1-gray?style=flat" height="22"></a>
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_7_1"><img src="https://img.shields.io/badge/◀️_Назад-v2.7.1-blue?style=flat" height="22"></a> 
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_8_1"><img src="https://img.shields.io/badge/Вперед_▶️-v2.8.1-blue?style=flat" height="22"></a>
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_7_2"><img src="https://img.shields.io/badge/◀️_Назад-v2.7.2-blue?style=flat" height="22"></a> 
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_9_1"><img src="https://img.shields.io/badge/Вперед_▶️-v2.9.1-blue?style=flat" height="22"></a>
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v_latest"><img src="https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat" height="22"></a>
 </div>
 
 ---
 
 <div align="right">
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_7_2/Src/code/main.cpp">
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_8_1/Src/FractionLib/code/Fraction.cpp">
     <img src="https://img.shields.io/badge/Source_Code-blue?style=social&logo=github" height="25">
   </a>
 </div>
 
 <div align="center">
 
-#  Проект: Исключение конструктора класса
- Создание обработкаи исключения в конструкторе класса <br>
-
-> **Примечание:** Добавлен параметр сборки для попытки выстоять заменив некоректные данные корректыми <br>
-[![Ref](https://img.shields.io/badge/ref-v2.5.3-blue?style=flat-square&logo=github)](https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_5_3) исходник класса <br>
+#  Проект: Перегрузка операторов
+ Создание библиотеки для работы с дробями и тестирование ивоного<br>
+Здесь обединились 2_8_1 Сравнения в дробях. и 2_8_2 Остальные операции с дробями.
 
 </div>
+> **Примечание:** ссылки на мой старый похожий код которым вдохнавлялся <br>
+[![Ref](https://img.shields.io/badge/ref-v2.5.1-blue?style=flat-square&logo=github)](https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_5_1) тестирование <br>
 
 
 
@@ -56,169 +56,136 @@
 ## 🚀 Пример работы программы
 
 ### Preview
-![][preview2_7_2]
+![][preview2_8_1]
+![][preview2_8_2]
 
 ### Вывод в консоль
 
--DSHUTDOWN_ON_ERROR=on
 ```bash
-/m/H/!/0/Learn_2►./build/bin/Class_constructor_exception
-=== Инициализация и проверка фигур ===
+/m/H/!/0/Learn_2►cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug 
+-- The CXX compiler identification is GNU 16.1.1
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.5s)
+-- Generating done (0.0s)
+-- Build files have been written to: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/build
+/m/H/!/0/Learn_2►cmake --build build --parallel
+[6/6] Linking CXX executable bin/FractionTests_2
+/m/H/!/0/Learn_2►cd build
+/m/H/!/0/L/build►ctest
+Test project /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/build
+    Start 1: Run_Basic_Tests
+1/2 Test #1: Run_Basic_Tests ..................   Passed    0.00 sec
+    Start 2: Run_Stress_Tests
+2/2 Test #2: Run_Stress_Tests .................   Passed    0.58 sec
 
-[КРИТИКА] Срочная остановка программы!
-Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfTriangles.hpp (строка 10)
-Функция: Triangle::Triangle(int, int, int, int, int, int, const std::string&)
-Ошибка: сумма углов не равна 180
+100% tests passed, 0 tests failed out of 2
 
-terminate called after throwing an instance of 'figure_error'
-  what():  Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfTriangles.hpp (строка 10)
-Функция: Triangle::Triangle(int, int, int, int, int, int, const std::string&)
-Ошибка: сумма углов не равна 180
-fish: Job 1, './build/bin/Class_constructor_e…' terminated by signal SIGABRT (Abort)
+Total Test time (real) =   0.59 sec
+/m/H/!/0/L/build►  
 ```
 
--DSHUTDOWN_ON_ERROR=off
 ```bash
-/m/H/!/0/L/m/H/!/0/L/m/H/!/0/Learn_2►./build/bin/Class_constructor_exception
-=== Инициализация и проверка фигур ===
+/m/H/!/0/L/build►ctest -R Run_Basic_Tests --verbose
+UpdateCTestConfiguration  from :/mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/build/DartConfiguration.tcl
+Test project /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/build
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: Run_Basic_Tests
 
-[ЛОГ КОНСТРУКТОРА] Попытка выстоять. Исключение улетает выше:
-Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfTriangles.hpp (строка 10)
-Функция: Triangle::Triangle(int, int, int, int, int, int, const std::string&)
-Ошибка: сумма углов не равна 180
+1: Test command: /mnt/HDD_DataStore/!\ 01\ Programming_Project_Save/01\ C++/Learn_2/build/bin/FractionTests_1
+1: Working Directory: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/build/Src/Tests
+1: Test timeout computed to be: 10000000
+1: === Running Manual Verification Scenario ===
+1: f1 not == f2
+1: f1 != f2
+1: f1 not < f2
+1: f1 > f2
+1: f1 not <= f2
+1: f1 >= f2
+1:
+1: === Running Automated Assert Tests ===
+1: All tests passed successfully!
+1/1 Test #1: Run_Basic_Tests ..................   Passed    0.00 sec
 
-[ЛОГ КОНСТРУКТОРА] Попытка выстоять. Исключение улетает выше:
-Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfTriangles.hpp (строка 10)
-Функция: Triangle::Triangle(int, int, int, int, int, int, const std::string&)
-Ошибка: сумма углов не равна 180
+The following tests passed:
+	Run_Basic_Tests
 
-⚠️ Не удалось создать фигуру! Лог перехвачен в main:
-Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfTriangles.hpp (строка 10)
-Функция: Triangle::Triangle(int, int, int, int, int, int, const std::string&)
-Ошибка: сумма углов не равна 180
------------------------------------------
-[ЛОГ КОНСТРУКТОРА] Попытка выстоять. Исключение улетает выше:
-Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfTriangles.hpp (строка 10)
-Функция: Triangle::Triangle(int, int, int, int, int, int, const std::string&)
-Ошибка: сумма углов не равна 180
+100% tests passed, 0 tests failed out of 1
 
-[ЛОГ КОНСТРУКТОРА] Попытка выстоять. Исключение улетает выше:
-Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfTriangles.hpp (строка 10)
-Функция: Triangle::Triangle(int, int, int, int, int, int, const std::string&)
-Ошибка: сумма углов не равна 180
-
-⚠️ Не удалось создать фигуру! Лог перехвачен в main:
-Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfTriangles.hpp (строка 10)
-Функция: Triangle::Triangle(int, int, int, int, int, int, const std::string&)
-Ошибка: сумма углов не равна 180
------------------------------------------
-[ЛОГ КОНСТРУКТОРА] Попытка выстоять. Исключение улетает выше:
-Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfQuadrancles.hpp (строка 10)
-Функция: Quadrangle::Quadrangle(int, int, int, int, int, int, int, int, const std::string&)
-Ошибка: сумма углов не равна 360
-
-⚠️ Не удалось создать фигуру! Лог перехвачен в main:
-Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfQuadrancles.hpp (строка 10)
-Функция: Quadrangle::Quadrangle(int, int, int, int, int, int, int, int, const std::string&)
-Ошибка: сумма углов не равна 360
------------------------------------------
-[ЛОГ КОНСТРУКТОРА] Попытка выстоять. Исключение улетает выше:
-Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfQuadrancles.hpp (строка 10)
-Функция: Quadrangle::Quadrangle(int, int, int, int, int, int, int, int, const std::string&)
-Ошибка: сумма углов не равна 360
-
-[ЛОГ КОНСТРУКТОРА] Попытка выстоять. Исключение улетает выше:
-Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfQuadrancles.hpp (строка 10)
-Функция: Quadrangle::Quadrangle(int, int, int, int, int, int, int, int, const std::string&)
-Ошибка: сумма углов не равна 360
-
-⚠️ Не удалось создать фигуру! Лог перехвачен в main:
-Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfQuadrancles.hpp (строка 10)
-Функция: Quadrangle::Quadrangle(int, int, int, int, int, int, int, int, const std::string&)
-Ошибка: сумма углов не равна 360
------------------------------------------
-[ЛОГ КОНСТРУКТОРА] Попытка выстоять. Исключение улетает выше:
-Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfQuadrancles.hpp (строка 10)
-Функция: Quadrangle::Quadrangle(int, int, int, int, int, int, int, int, const std::string&)
-Ошибка: сумма углов не равна 360
-
-[ЛОГ КОНСТРУКТОРА] Попытка выстоять. Исключение улетает выше:
-Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfQuadrancles.hpp (строка 10)
-Функция: Quadrangle::Quadrangle(int, int, int, int, int, int, int, int, const std::string&)
-Ошибка: сумма углов не равна 360
-
-[ЛОГ КОНСТРУКТОРА] Попытка выстоять. Исключение улетает выше:
-Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfQuadrancles.hpp (строка 10)
-Функция: Quadrangle::Quadrangle(int, int, int, int, int, int, int, int, const std::string&)
-Ошибка: сумма углов не равна 360
-
-⚠️ Не удалось создать фигуру! Лог перехвачен в main:
-Файл: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/include/Figure/BranchOfQuadrancles.hpp (строка 10)
-Функция: Quadrangle::Quadrangle(int, int, int, int, int, int, int, int, const std::string&)
-Ошибка: сумма углов не равна 360
------------------------------------------
-
-=== Вывод информации об успешных фигурах ===
-
-Фигура (Сторон: 0):
-Иерархия типа:
-Figure
-
------------------------------------------
-Треугольник (Сторон: 3):
-Стороны: a=10 b=20 c=30
-Углы: A=50 B=60 C=70
-Иерархия типа:
-Figure
-  |-- Triangle
-
------------------------------------------
-Равносторонний треугольник (Сторон: 3):
-Стороны: a=30 b=30 c=30
-Углы: A=60 B=60 C=60
-Иерархия типа:
-Figure
-  |-- Triangle
-  |  |-- EquilateralTriangle
-
------------------------------------------
-Прямоугольник (Сторон: 4):
-Стороны: a=10 b=20 c=10 d=20
-Углы: A=90 B=90 C=90 D=90
-Иерархия типа:
-Figure
-  |-- Quadrangle
-  |  |-- Parallelogram
-  |  |  |-- RectangleFigure
-
------------------------------------------
-Квадрат (Сторон: 4):
-Стороны: a=20 b=20 c=20 d=20
-Углы: A=90 B=90 C=90 D=90
-Иерархия типа:
-Figure
-  |-- Quadrangle
-  |  |-- Parallelogram
-  |  |  |-- RectangleFigure
-  |  |  |  |-- Square
-
------------------------------------------
+Total Test time (real) =   0.00 sec
 ```
 
+```bash
+/m/H/!/0/L/build►ctest -R Run_Stress_Tests --verbose
+UpdateCTestConfiguration  from :/mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/build/DartConfiguration.tcl
+Test project /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/build
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 2
+    Start 2: Run_Stress_Tests
+
+2: Test command: /mnt/HDD_DataStore/!\ 01\ Programming_Project_Save/01\ C++/Learn_2/build/bin/FractionTests_2
+2: Working Directory: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/build/Src/Tests
+2: Test timeout computed to be: 10000000
+2: === STARTING MAX STRESS TEST (100,000 iterations) ===
+2: -> Progress:  10000 / 100000 iterations checked...
+2: -> Progress:  20000 / 100000 iterations checked...
+2: -> Progress:  30000 / 100000 iterations checked...
+2: -> Progress:  40000 / 100000 iterations checked...
+2: -> Progress:  50000 / 100000 iterations checked...
+2: -> Progress:  60000 / 100000 iterations checked...
+2: -> Progress:  70000 / 100000 iterations checked...
+2: -> Progress:  80000 / 100000 iterations checked...
+2: -> Progress:  90000 / 100000 iterations checked...
+2: -> Progress: 100000 / 100000 iterations checked...
+2: 🚀 STRESS TEST PASSED COMPLETELY! 100,000 states verified without any crashes!
+1/1 Test #2: Run_Stress_Tests .................   Passed    0.58 sec
+
+The following tests passed:
+	Run_Stress_Tests
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.58 sec
+```
 
 #  Команды для сборки
 
 ```bash
-cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug -DSHUTDOWN_ON_ERROR=on 
-```
-
-```bash
-cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug -DSHUTDOWN_ON_ERROR=off 
+cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug 
 ```
 
 ```bash
 cmake --build build --parallel
 ```
+
+```bash
+cd build 
+ctest --verbose 
+```
+
+или
+
+```bash
+cd build 
+ctest -R Run_Basic_Tests --verbose
+ctest -R Run_Stress_Tests --verbose 
+```
+
+или
 
 ```bash
 ./build/bin/{projectname}  
@@ -284,7 +251,7 @@ cmake --build build --parallel
 
 </details>
 
-<details>
+<details open>
 <summary><b>📂 2.8.0 Перегрузка операторов </b></summary>
 <br>
 
@@ -303,7 +270,7 @@ cmake --build build --parallel
 
 </details>
 
-<details open>
+<details >
 <summary><b>📂 2.7.0 Исключения и обработка ошибок </b></summary>
 <br>
 

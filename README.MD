@@ -12,26 +12,28 @@
 
 <div align="left">
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1"><img src="https://img.shields.io/badge/⏮️_Первый-v2.1.1-gray?style=flat" height="22"></a>
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_8_2"><img src="https://img.shields.io/badge/◀️_Назад-v2.8.2-blue?style=flat" height="22"></a> 
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_9_2"><img src="https://img.shields.io/badge/Вперед_▶️-v2.9.2-blue?style=flat" height="22"></a>
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_9_1"><img src="https://img.shields.io/badge/◀️_Назад-v2.9.1-blue?style=flat" height="22"></a> 
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_10_1"><img src="https://img.shields.io/badge/Вперед_▶️-v2.10.1-blue?style=flat" height="22"></a>
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v_latest"><img src="https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat" height="22"></a>
 </div>
 
 ---
 
 <div align="right">
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_9_1/Src/code/main.cpp">
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_9_2/Src/code/main.cpp">
     <img src="https://img.shields.io/badge/Source_Code-blue?style=social&logo=github" height="25">
   </a>
 </div>
 
 <div align="center">
 
-#  Проект: Cmake Простейший проект.
- Создание простого проекта и эксперемент по выносу системы сборки в отдельную директорию от основного кода<br>
+#  Проект: Cmake Пересоздание задания по иерархии.
+ Повторное использование кода и сборка при помощи Cmake и дополнительно эксперемент повыносу кода для системы сборки в отдельный файл<br>
 
 </div>
 
+> **Примечание:** ссылки на мой старый похожий код которым вдохнавлялся <br>
+[![Ref](https://img.shields.io/badge/ref-v2.5.3-blue?style=flat-square&logo=github)](https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_5_3) иерархия классов <br>
 
 
 
@@ -54,35 +56,141 @@
 ## 🚀 Пример работы программы
 
 ### Preview
-![][preview2_9_1]
+![][preview2_9_2]
 
 ### Вывод в консоль
 
 ```bash
-/m/H/!/0/Learn_2►ls 
-drwxr-xr-x    - maksimus 26 июн 01:15  .git
-drwxr-xr-x    - maksimus 26 июн 01:04  Build_System
-drwxr-xr-x    - maksimus 25 июн 21:56  ReadmeSource
-drwxr-xr-x    - maksimus 26 июн 00:59  Src
-.rwxr-xr-x  658 maksimus 26 июн 01:01 󰊢 .gitignore
-.rwxr-xr-x 1,1k maksimus 30 мая 22:23  LICENSE
-.rwxr-xr-x  52k maksimus 26 июн 01:12  README.MD
-/m/H/!/0/Learn_2►cmake -S Build_System -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug 
+/m/H/!/0/Learn_2►cmake -S Build_System -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug  
 -- The CXX compiler identification is GNU 16.1.1
 -- Detecting CXX compiler ABI info
 -- Detecting CXX compiler ABI info - done
 -- Check for working CXX compiler: /usr/bin/c++ - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- Configuring done (0.6s)
+-- Configuring done (0.3s)
 -- Generating done (0.0s)
 -- Build files have been written to: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/build
-/m/H/!/0/Learn_2►cmake --build build --parallel   
-[2/2] Linking CXX executable bin/Worc-2_9_Cmake_simple_Project
-/m/H/!/0/Learn_2►./build/bin/Worc-2_9_Cmake_simple_Project  
-Введите имя: Иванов Иван Иваныч
-Здравствуйте, Иванов Иван Иваныч!
-/m/H/!/0/Learn_2► 
+/m/H/!/0/Learn_2►cmake --build build --parallel --verbose 
+Change Dir: '/mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/build'
+
+Run Build Command(s): /usr/bin/ninja -v
+[1/3] /usr/bin/c++  -I"/mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Build_System/../Src/include" \
+  -g \
+  -std=c++20 \
+  -Winvalid-pch \
+  -x c++-header \
+  -include "/mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/build/CMakeFiles/Worc-2_9_Cmake_reforje_ierarhy.dir/cmake_pch.hxx" \
+  -MD \
+  -MT CMakeFiles/Worc-2_9_Cmake_reforje_ierarhy.dir/cmake_pch.hxx.gch \
+  -MF CMakeFiles/Worc-2_9_Cmake_reforje_ierarhy.dir/cmake_pch.hxx.gch.d \
+  -o CMakeFiles/Worc-2_9_Cmake_reforje_ierarhy.dir/cmake_pch.hxx.gch \
+  -c '/mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/build/CMakeFiles/Worc-2_9_Cmake_reforje_ierarhy.dir/cmake_pch.hxx.cxx'
+[2/3] /usr/bin/c++  -I"/mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Build_System/../Src/include" \
+  -g \
+  -std=c++20 \
+  -Winvalid-pch \
+  -include "/mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/build/CMakeFiles/Worc-2_9_Cmake_reforje_ierarhy.dir/cmake_pch.hxx" \
+  -MD \
+  -MT 'CMakeFiles/Worc-2_9_Cmake_reforje_ierarhy.dir/mnt/HDD_DataStore/!_01_Programming_Project_Save/01_C++/Learn_2/Src/code/main.cpp.o' \
+  -MF CMakeFiles/Worc-2_9_Cmake_reforje_ierarhy.dir/mnt/HDD_DataStore/!_01_Programming_Project_Save/01_C++/Learn_2/Src/code/main.cpp.o.d \
+  -o 'CMakeFiles/Worc-2_9_Cmake_reforje_ierarhy.dir/mnt/HDD_DataStore/!_01_Programming_Project_Save/01_C++/Learn_2/Src/code/main.cpp.o' \
+  -c '/mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/Src/code/main.cpp'
+[3/3] : && /usr/bin/c++ -g \
+  -Wl,--dependency-file=CMakeFiles/Worc-2_9_Cmake_reforje_ierarhy.dir/link.d \
+  'CMakeFiles/Worc-2_9_Cmake_reforje_ierarhy.dir/mnt/HDD_DataStore/!_01_Programming_Project_Save/01_C++/Learn_2/Src/code/main.cpp.o' \
+  -o bin/Worc-2_9_Cmake_reforje_ierarhy 
+&& :
+
+/m/H/!/0/Learn_2►./build/bin/Worc-2_9_Cmake_reforje_ierarhy 
+Фигура (Сторон: 0):
+Иерархия типа:
+Figure
+
+-----------------------------------------
+Треугольник (Сторон: 3):
+Стороны: a=10 b=20 c=30
+Углы: A=50 B=60 C=70
+Иерархия типа:
+Figure
+  |-- Triangle
+
+-----------------------------------------
+Прямоугольный треугольник (Сторон: 3):
+Стороны: a=10 b=20 c=30
+Углы: A=50 B=60 C=90
+Иерархия типа:
+Figure
+  |-- Triangle
+  |  |-- RightTriangle
+
+-----------------------------------------
+Равнобедренный треугольник (Сторон: 3):
+Стороны: a=10 b=20 c=10
+Углы: A=50 B=60 C=50
+Иерархия типа:
+Figure
+  |-- Triangle
+  |  |-- IsoscelesTriangle
+
+-----------------------------------------
+Равносторонний треугольник (Сторон: 3):
+Стороны: a=30 b=30 c=30
+Углы: A=60 B=60 C=60
+Иерархия типа:
+Figure
+  |-- Triangle
+  |  |-- EquilateralTriangle
+
+-----------------------------------------
+Четырёхугольник (Сторон: 4):
+Стороны: a=10 b=20 c=30 d=40
+Углы: A=50 B=60 C=70 D=80
+Иерархия типа:
+Figure
+  |-- Quadrangle
+
+-----------------------------------------
+Параллелограмм (Сторон: 4):
+Стороны: a=20 b=30 c=20 d=30
+Углы: A=30 B=40 C=30 D=40
+Иерархия типа:
+Figure
+  |-- Quadrangle
+  |  |-- Parallelogram
+
+-----------------------------------------
+Прямоугольник (Сторон: 4):
+Стороны: a=10 b=20 c=10 d=20
+Углы: A=90 B=90 C=90 D=90
+Иерархия типа:
+Figure
+  |-- Quadrangle
+  |  |-- Parallelogram
+  |  |  |-- RectangleFigure
+
+-----------------------------------------
+Ромб (Сторон: 4):
+Стороны: a=30 b=30 c=30 d=30
+Углы: A=30 B=40 C=30 D=40
+Иерархия типа:
+Figure
+  |-- Quadrangle
+  |  |-- Parallelogram
+  |  |  |-- Rhombus
+
+-----------------------------------------
+Квадрат (Сторон: 4):
+Стороны: a=20 b=20 c=20 d=20
+Углы: A=90 B=90 C=90 D=90
+Иерархия типа:
+Figure
+  |-- Quadrangle
+  |  |-- Parallelogram
+  |  |  |-- RectangleFigure
+  |  |  |  |-- Square
+
+-----------------------------------------
 ```
 
 
@@ -94,6 +202,12 @@ cmake -S Build_System -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug
 
 ```bash
 cmake --build build --parallel
+```
+
+или
+
+```bash
+cmake --build build --parallel --verbose
 ```
 
 ```bash

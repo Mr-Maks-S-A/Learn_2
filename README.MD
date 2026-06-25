@@ -32,6 +32,7 @@
 Здесь обединились 2_8_1 Сравнения в дробях. и 2_8_2 Остальные операции с дробями.
 
 </div>
+
 > **Примечание:** ссылки на мой старый похожий код которым вдохнавлялся <br>
 [![Ref](https://img.shields.io/badge/ref-v2.5.1-blue?style=flat-square&logo=github)](https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_5_1) тестирование <br>
 

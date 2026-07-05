@@ -5,20 +5,18 @@
 
 #include <iostream>
 #include <string>
-#include <Greeter.hpp> // Подключаем заголовочный файл библиотеки
+#include <Leaver.hpp> // Подключаем заголовочный файл библиотеки
 
 int main() {
     // Настройка локализации для корректного вывода кириллицы в консоли
-    std::setlocale(LC_ALL, "Russian");
-    
+std::setlocale(LC_ALL, "Russian");
+
     std::cout << "Введите имя: ";
     std::string name;
-    std::getline(std::cin, name); // Используем getline, чтобы корректно считывать имена с пробелами
+    std::cin >> name;
 
-    Greeter greeter;
-    std::string greeting = greeter.greet(name);
-
-    std::cout << greeting << std::endl;
+    Leaver leaver;
+    std::cout << leaver.leave(name) << std::endl;
 
     return EXIT_SUCCESS;
 };

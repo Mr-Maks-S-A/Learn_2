@@ -12,22 +12,22 @@
 
 <div align="left">
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_1_1"><img src="https://img.shields.io/badge/⏮️_Первый-v2.1.1-gray?style=flat" height="22"></a>
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_9_2"><img src="https://img.shields.io/badge/◀️_Назад-v2.9.2-blue?style=flat" height="22"></a> 
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_10_2"><img src="https://img.shields.io/badge/Вперед_▶️-v2.10.2-blue?style=flat" height="22"></a>
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_10_1"><img src="https://img.shields.io/badge/◀️_Назад-v2.10.1-blue?style=flat" height="22"></a> 
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v2_10_3"><img src="https://img.shields.io/badge/Вперед_▶️-v2.10.3-blue?style=flat" height="22"></a>
   <a href="https://github.com/Mr-Maks-S-A/Learn_2/tree/v_latest"><img src="https://img.shields.io/badge/⏭️_Последний-latest-brightgreen?style=flat" height="22"></a>
 </div>
 
 ---
 
 <div align="right">
-  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_10_1/Src/AppSimpleStaticLIb/code/main.cpp">
+  <a href="https://github.com/Mr-Maks-S-A/Learn_2/blob/v2_10_2/Src/AppSimpleStaticLIb/code/main.cpp">
     <img src="https://img.shields.io/badge/Source_Code-blue?style=social&logo=github" height="25">
   </a>
 </div>
 
 <div align="center">
 
-#  Проект: Библиотеки 1.
+#  Проект: Библиотеки 2 DLL.
  Просто реализую разные типы библиотек разной сложности<br>
 
 </div>
@@ -53,11 +53,19 @@
 ## 🚀 Пример работы программы
 
 ### Preview
-![][preview2_10_1]
+![][preview2_10_2]
 
 ### Вывод в консоль
 
 ```bash
+/m/H/!/0/Learn_2►ls   
+drwxr-xr-x    - maksimus  5 июл 16:41  .git
+drwxr-xr-x    - maksimus  5 июл 16:24  ReadmeSource
+drwxr-xr-x    - maksimus  5 июл 16:35  Src
+.rwxr-xr-x  658 maksimus 26 июн 01:01 󰊢 .gitignore
+.rwxr-xr-x  772 maksimus  5 июл 16:40  CMakeLists.txt
+.rwxr-xr-x 1,1k maksimus 30 мая 22:23  LICENSE
+.rwxr-xr-x  52k maksimus  5 июл 16:31  README.MD
 /m/H/!/0/Learn_2►cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug  
 -- The CXX compiler identification is GNU 16.1.1
 -- Detecting CXX compiler ABI info
@@ -68,12 +76,16 @@
 -- Configuring done (0.3s)
 -- Generating done (0.0s)
 -- Build files have been written to: /mnt/HDD_DataStore/! 01 Programming_Project_Save/01 C++/Learn_2/build
-/m/H/!/0/Learn_2►cmake --build build --parallel
-[4/4] Linking CXX executable bin/AppSimpleStaticLIb
-/m/H/!/0/Learn_2►./build/bin/AppSimpleStaticLIb    
+/m/H/!/0/Learn_2►cmake --build build --parallel 
+[4/4] Linking CXX executable bin/AppSimpleDLL_LIb
+/m/H/!/0/Learn_2►ls build/
+.rwxr-xr-x 79k maksimus  5 июл 16:41 󰡯 AppSimpleDLL_LIb
+.rwxr-xr-x 85k maksimus  5 июл 16:41  libLeaver_lib.so
+/m/H/!/0/Learn_2►cd build/bin/
+/m/H/!/0/L/b/bin►./AppSimpleDLL_LIb 
 Введите имя: Иванов Иван Иваныч
-Здравствуйте, Иванов Иван Иваныч!
-/m/H/!/0/Learn_2►                 
+До свидания, Иванов!
+/m/H/!/0/L/b/bin►          
 ```
 
 

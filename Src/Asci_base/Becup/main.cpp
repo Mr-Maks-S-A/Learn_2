@@ -7,18 +7,18 @@
 #include <sstream>
 #include <string>
 
-// Размеры ОДНОГО ракурса в символах под интерфейс (под стиль Stone Story)
-const int VIEW_CHARS_W = 35;
-const int VIEW_CHARS_H = 25;
+// Размеры ОДНОГО ракурса в символах под интерфейс (30 строк, 15 колонок)
+const int VIEW_CHARS_W = 100;
+const int VIEW_CHARS_H = 100;
 
 // Размеры всей сетки 2х2 в символах (включая рамки)
 const int TOTAL_CHARS_W = VIEW_CHARS_W * 2 + 3;
 const int TOTAL_CHARS_H = VIEW_CHARS_H * 2 + 3;
 
-// Масштаб отображения под маленькую матрицу
-const float SCALE_X = VIEW_CHARS_W * 0.4f;
-// Компенсируем то, что высота строки в консоли обычно больше ширины символа:
-const float SCALE_Y = VIEW_CHARS_H * 0.4f * 0.5f;
+// Масштаб для Stone Story ASCII (камера отдалена, чтобы модель гарантированно влезала)
+const float SCALE_X = VIEW_CHARS_W * 0.12f;
+// В ASCII-арте высота строки обычно в 2 раза больше ширины символа, компенсируем это:
+const float SCALE_Y = VIEW_CHARS_H * 0.12f * 0.5f;
 
 struct Vec3 {
     float x, y, z;
@@ -49,43 +49,22 @@ struct ViewAngle {
 };
 
 // Выбор ASCII символа в зависимости от направления линии (как в Stone Story)
-// char getAsciiCharForLine(int x0, int y0, int x1, int y1) {
-//     int dx = x1 - x0;
-//     int dy = y1 - y0; // В консоли Y идет сверху вниз
-//
-//     if (dx == 0 && dy == 0) return '.';
-//
-//     float angle = std::atan2(static_cast<float>(dy), static_cast<float>(dx)) * 180.0f / 3.14159265f;
-//     if (angle < 0) angle += 180.0f; // Приводим к диапазону 0-180
-//
-//     // Разделяем углы на сектора для подбора символа
-//     if (angle >= 0.0f && angle < 22.5f)   return '_';
-//     if (angle >= 22.5f && angle < 67.5f)  return '\\'; // Наклон влево-вниз
-//     if (angle >= 67.5f && angle < 112.5f) return '|';  // Вертикаль
-//     if (angle >= 112.5f && angle < 157.5f) return '/';  // Наклон вправо-вниз
-//     return '_';
-// }
 char getAsciiCharForLine(int x0, int y0, int x1, int y1) {
     int dx = x1 - x0;
-    int dy = y1 - y0;
+    int dy = y1 - y0; // В консоли Y идет сверху вниз
 
     if (dx == 0 && dy == 0) return '.';
 
     float angle = std::atan2(static_cast<float>(dy), static_cast<float>(dx)) * 180.0f / 3.14159265f;
-    if (angle < 0) angle += 180.0f;
+    if (angle < 0) angle += 180.0f; // Приводим к диапазону 0-180
 
-    // Более мелкий шаг углов для красивых стыков
-    if (angle >= 0.0f   && angle < 15.0f)  return '_';
-    if (angle >= 15.0f  && angle < 35.0f)  return '.';
-    if (angle >= 35.0f  && angle < 55.0f)  return '\\';
-    if (angle >= 55.0f  && angle < 75.0f)  return '`';
-    if (angle >= 75.0f  && angle < 105.0f) return '|';
-    if (angle >= 105.0f && angle < 125.0f) return '\'';
-    if (angle >= 125.0f && angle < 145.0f) return '/';
-    if (angle >= 145.0f && angle < 165.0f) return ',';
+    // Разделяем углы на сектора для подбора символа
+    if (angle >= 0.0f && angle < 22.5f)   return '_';
+    if (angle >= 22.5f && angle < 67.5f)  return '\\'; // Наклон влево-вниз
+    if (angle >= 67.5f && angle < 112.5f) return '|';  // Вертикаль
+    if (angle >= 112.5f && angle < 157.5f) return '/';  // Наклон вправо-вниз
     return '_';
 }
-
 
 // Рисование линии Брезенхэма с заполнением ASCII текстурой
 void drawAsciiLine(std::vector<std::vector<char>>& grid, std::vector<std::vector<float>>& zGrid,
@@ -156,7 +135,7 @@ void drawAsciiLine(std::vector<std::vector<char>>& grid, std::vector<std::vector
 
                    int main() {
                        std::vector<Vec3> baseVertices;
-                       std::vector<Triangle> triangles = loadOBJ("torus_stone.obj", baseVertices);
+                       std::vector<Triangle> triangles = loadOBJ("moto_simple_1.obj", baseVertices);
                        if (triangles.empty()) {
                            std::cerr << "Положите suzanne.obj рядом с исполняемым файлом!" << std::endl;
                            return 1;
@@ -265,21 +244,9 @@ void drawAsciiLine(std::vector<std::vector<char>>& grid, std::vector<std::vector
                                    if (dotNormal < 0.3f) isCrease = true;
                                }
 
-                               // if (isSilhouette || isCrease) {
-                               //     int x0 = charCoords[e.v1].first, y0 = charCoords[e.v1].second;
-                               //     int x1 = charCoords[e.v2].first, y1 = charCoords[e.v2].second;
-                               //     float z0 = transVertices[e.v1].z;
-                               //     float z1 = transVertices[e.v2].z;
-                               //
-                               //     drawAsciiLine(localViewGrid, localZBuffer, x0, y0, x1, y1, z0, z1);
-                               // }
                                if (isSilhouette || isCrease) {
                                    int x0 = charCoords[e.v1].first, y0 = charCoords[e.v1].second;
                                    int x1 = charCoords[e.v2].first, y1 = charCoords[e.v2].second;
-
-                                   // Пропускаем микро-линии, которые схлопываются в точку и создают грязь
-                                   if (x0 == x1 && y0 == y1) continue;
-
                                    float z0 = transVertices[e.v1].z;
                                    float z1 = transVertices[e.v2].z;
 
@@ -299,7 +266,7 @@ void drawAsciiLine(std::vector<std::vector<char>>& grid, std::vector<std::vector
                        }
 
                        // Сохранение кадра
-                       std::ofstream outFile("stone_story_torus_stone.txt");
+                       std::ofstream outFile("stone_story_style_ui.txt");
                        for (const auto& row : totalConsoleGrid) {
                            for (const auto& symbol : row) outFile << symbol;
                            outFile << "\n";

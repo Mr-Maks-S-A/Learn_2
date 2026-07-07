@@ -2,7 +2,7 @@
 #include <string>
 
 // Окно экспорта/импорта для Windows. 
-// Если собирается библиотека, макрос leaver_lib_EXPORTS определяется CMake автоматически.
+// Если собирается библиотека SHARED, макрос Leaver_lib_EXPORTS определяется CMake автоматически.
 #ifdef _WIN32
     #ifdef Leaver_lib_EXPORTS
         #define LEAVER_API __declspec(dllexport)
